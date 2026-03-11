@@ -1,0 +1,3 @@
+https://feeds.bbci.co.uk/news/rss.xml
+https://www.reutersagency.com/feed/
+https://hnrss.org/frontpage
