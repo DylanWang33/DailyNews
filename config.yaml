@@ -2,15 +2,24 @@
 obsidian_base: /Users/kryss/仓库/Dylan/DailyNews
 obsidian_vault_root: /Users/kryss/仓库/Dylan
 
-# 我的关注：关键词列表。分号表示多个标签且必须全部命中（在 entities/标题/摘要 中）才归入该组
-# 例：美国;伊朗 表示文章须同时包含「美国」和「伊朗」才放入 我的关注/日期/美国;伊朗.md
+# ── 我的关注：关键词列表 ────────────────────────────────────────────────────
 keywords:
   - 油价
   - 美国;伊朗
   - 战争
-  # - 通胀
-  # - oil
-  # - OPEC
 
-# 契合度阈值 0~1，≥ 此值则归入「我的关注」（基于标题 + RSS 摘要匹配，含中文关键词译英匹配）
+# 契合度阈值（仅在 AI 不可用时的传统回退模式生效）
 relevance_threshold: 0.7
+
+# ── Anthropic 直连（有 API 余额时使用，key 存 .env 的 ANTHROPIC_API_KEY） ──
+# anthropic_model: "claude-haiku-4-5-20251001"
+# anthropic_timeout: 60
+
+# ── OpenAI 兼容 Gateway（Groq 免费方案，key 存 .env 的 GROQ_API_KEY） ────────
+openclaw_base_url: "https://api.groq.com/openai"
+openclaw_model: "llama-3.3-70b-versatile"
+openclaw_timeout: 60
+# API key 从环境变量 GROQ_API_KEY 自动读取，无需填写此处
+
+# 开启 AI 批量翻译英文标题（LLM 翻译质量优于 argostranslate）
+openclaw_translate: true

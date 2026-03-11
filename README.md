@@ -78,10 +78,20 @@ cd /Users/kryss/DailyNewsRepo
 - **Permission denied**：对 `每日新闻`、`我的关注`、`logs` 等目录执行 `chown`/`chmod` 确保当前用户可写。
 - **我的关注为空**：单关键词时检查 `relevance_threshold`；多标签（如 `美国;伊朗`）时需正文中同时出现所有标签，且会抓取正文（可能较慢或部分站点失败）。
 
-## 摘要与 AI 总结
+## AI 驱动（OpenClaw 集成）
 
-- **我的关注**中多标签条目会抓取正文并用 **sumy**（LSA 抽取式摘要）生成简短总结，无需 API、本地免费。
-- 若希望「AI 总结全文」：可用**免费**方案如本地 [Ollama](https://ollama.com) 等；**付费**方案如 OpenAI / Claude 等 API。当前脚本未集成具体 API，如需可自行在写入前调用接口生成 `summary` 再写入。
+配置 `openclaw_base_url` 后，以下环节自动切换为 AI 驱动：
+
+| 环节 | 未配置（传统） | 配置后（AI） |
+|------|----------------|--------------|
+| 单标签筛选 | 标题+摘要字符串匹配 | LLM 批量语义相关性判断 |
+| 多标签匹配 | 抓正文 → spacy 实体提取 → 字符串检测 | LLM 直接判断（无需抓正文，更快） |
+| 摘要生成 | sumy LSA 抽取式 | LLM 生成式（可指定中文、突出重点） |
+| 标题翻译（可选） | argostranslate | LLM 批量翻译（需 `openclaw_translate: true`） |
+
+OpenClaw 支持多种后端：本地 Ollama（免费、隐私）、OpenAI、Claude 等。详见 [docs/openclaw-集成分析.md](docs/openclaw-集成分析.md)。
+
+未配置 `openclaw_base_url` 时行为与之前完全一致（sumy 摘要、字符串匹配）。
 
 ## Obsidian 排版
 

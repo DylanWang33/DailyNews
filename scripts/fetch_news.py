@@ -1,5 +1,9 @@
-# 主程序：RSS（feeds-all.opml）→ 每日新闻（仅标题+链接）→ 我的关注（关键词/标签筛选）
-# 关键词支持分号：如 "美国;伊朗" 表示必须同时包含美国、伊朗（在 entities/标题/摘要 中）才归入该组
+# 主程序：RSS（feeds-all.opml）→ 每日新闻（仅标题+链接）→ 我的关注（AI/关键词筛选）
+# OpenClaw 集成：
+#   - 单标签筛选：batch_is_relevant_llm() 替代字符串匹配，回退到契合度评分
+#   - 多标签匹配：all_tags_match_llm() 替代 spacy 实体提取，无需先抓正文
+#   - AI 摘要：summarize_with_llm() 替代 sumy LSA，回退到 sumy
+#   - 可选标题翻译：translate_titles_with_llm() 替代 argostranslate（需 openclaw_translate: true）
 
 import os
 import sys
@@ -8,7 +12,6 @@ import warnings
 from datetime import date
 
 warnings.filterwarnings("ignore", module="requests")
-# 抑制 spacy/argos 等首次加载时的 Language 提示，避免每次运行刷屏
 warnings.filterwarnings("ignore", message=".*Language en package.*mwt.*")
 
 _REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -47,10 +50,17 @@ def _parse_keyword_groups(keywords):
 
 
 def _fetch_all_daily_news():
-    """从 OPML 拉取所有源、所有条目，返回 { 分类: { 源名: [items] } }；英文标题可译成中文显示。"""
+    """
+    从 OPML 拉取所有源、所有条目，返回 { 分类: { 源名: [items] } }。
+    英文标题优先用 LLM 批量翻译（openclaw_translate: true 时），否则用 argostranslate 逐条翻译。
+    """
     categories = load_categories_from_opml()
     if not categories:
         return {}
+
+    # 收集所有需要翻译的英文标题，用于后续批量 LLM 翻译
+    all_items_needing_translation = []  # [(category_name, source_name, item_dict)]
+
     result = {}
     for category_name, sources in categories.items():
         if not isinstance(sources, list):
@@ -69,27 +79,63 @@ def _fetch_all_daily_news():
                 if not link or not title or link in seen_links:
                     continue
                 seen_links.add(link)
-                display_title = title
-                title_original = ""
-                if not _has_cjk(title):
-                    try:
-                        display_title = translate(title) or title
-                        if display_title:
-                            title_original = title
-                    except Exception:
-                        pass
-                items.append({
-                    "title": display_title or title,
+                item = {
+                    "title": title,          # 暂存原始英文标题，批量翻译后替换
                     "link": link,
                     "source": name,
-                    "title_original": title_original or None,
+                    "title_original": None,
                     "summary": (raw.get("summary") or "").strip(),
-                })
+                    "_needs_translation": not _has_cjk(title),
+                }
+                items.append(item)
+                if item["_needs_translation"]:
+                    all_items_needing_translation.append(item)
             if items:
                 by_source[name] = items
         if by_source:
             result[category_name] = by_source
+
+    # 翻译英文标题：优先 LLM 批量翻译，回退到 argostranslate 逐条翻译
+    _translate_titles(all_items_needing_translation)
+
+    # 清理临时标志，确保输出结构干净
+    for by_source in result.values():
+        for items in by_source.values():
+            for item in items:
+                item.pop("_needs_translation", None)
+
     return result
+
+
+def _translate_titles(items_needing_translation):
+    """翻译 items 中所有英文标题，直接修改 item dict（in-place）。"""
+    if not items_needing_translation:
+        return
+
+    # 尝试 LLM 批量翻译（需 openclaw_translate: true）
+    try:
+        from llm_summary import translate_titles_with_llm
+        titles = [it["title"] for it in items_needing_translation]
+        translated = translate_titles_with_llm(titles)
+        if translated and len(translated) == len(titles):
+            for item, zh_title in zip(items_needing_translation, translated):
+                if zh_title and zh_title != item["title"]:
+                    item["title_original"] = item["title"]
+                    item["title"] = zh_title
+            return
+    except Exception:
+        pass
+
+    # 回退：argostranslate 逐条翻译
+    for item in items_needing_translation:
+        original = item["title"]
+        try:
+            zh = translate(original) or original
+            if zh and zh != original:
+                item["title_original"] = original
+                item["title"] = zh
+        except Exception:
+            pass
 
 
 def _flatten_daily_news(daily_news_by_cat):
@@ -109,7 +155,7 @@ def _flatten_daily_news(daily_news_by_cat):
 
 
 def _relevance_to_keyword(keyword, title, summary, translate_zh_to_en_fn):
-    """单条与单个关键词的契合度 0~1（仅用标题+摘要）。"""
+    """单条与单个关键词的契合度 0~1（仅用标题+摘要）。传统方法，LLM 不可用时的回退。"""
     text = (title or "") + " " + (summary or "")
     if not keyword or not text.strip():
         return 0.0
@@ -144,7 +190,7 @@ def _tag_in_text(tag, text):
 
 
 def _all_tags_in_article(tags, title, summary, entity_names):
-    """所有标签是否都出现在 标题、摘要、实体名 的并集中。"""
+    """所有标签是否都出现在 标题、摘要、实体名 的并集中（传统方法回退）。"""
     combined = (title or "") + " " + (summary or "") + " " + " ".join(entity_names or [])
     for tag in tags:
         if not _tag_in_text(tag, combined):
@@ -152,10 +198,28 @@ def _all_tags_in_article(tags, title, summary, entity_names):
     return True
 
 
+# ─── 单标签筛选：优先 AI 批量相关性判断，回退字符串匹配 ────────────────────
+
 def _build_my_following_single_tag(daily_news_flat, group_name, tags, relevance_threshold, translate_zh_to_en_fn):
-    """单标签组：仅用标题+摘要契合度，不抓正文。"""
+    """
+    单标签组：
+    - 若 OpenClaw 已配置，用 batch_is_relevant_llm() 进行 AI 语义相关性判断（更准确，识别同义表达）
+    - 否则回退：标题+摘要字符串契合度评分 ≥ relevance_threshold
+    """
     assert len(tags) == 1
     kw = tags[0]
+
+    # AI 路径：批量相关性判断
+    try:
+        from llm_summary import batch_is_relevant_llm
+        flags = batch_is_relevant_llm(daily_news_flat, kw)
+        if flags is not None:
+            print(f"  [AI筛选] 关键词「{kw}」：共 {len(daily_news_flat)} 篇 → AI 判定相关 {sum(flags)} 篇")
+            return [dict(item) for item, flag in zip(daily_news_flat, flags) if flag]
+    except Exception:
+        pass
+
+    # 传统回退：字符串契合度
     out = []
     for item in daily_news_flat:
         title = item.get("title") or ""
@@ -165,15 +229,18 @@ def _build_my_following_single_tag(daily_news_flat, group_name, tags, relevance_
     return out
 
 
+# ─── 多标签筛选：优先 AI 主题匹配（无需抓正文），回退实体提取 ───────────────
+
 def _build_my_following_multi_tag(BASE, daily_news_flat, group_name, tags, date_str):
     """
-    多标签组：仅当标题或摘要里出现至少一个标签时才抓正文；提取 entities，要求所有标签都在 entities/标题/摘要 中；
-    命中条目使用正文的 extractive 摘要，并写入 entities/日期/。
+    多标签组（AND 逻辑）：
+    - AI 路径：先用 all_tags_match_llm() 在标题+RSS摘要上判断（快速，无需抓正文）
+              命中后才抓正文生成 AI 摘要（summarize_with_llm）
+    - 传统回退（LLM 不可用时）：抓正文 → spacy 实体提取 → 全标签字符串匹配 → sumy 摘要
     """
-    from article_parser import fetch_article
-    from entity_extractor import extract_entities, write_entity
     from summarizer import summarize
 
+    # 第一步：预筛选（任意标签出现在标题/摘要中才进入候选）
     candidates = []
     for item in daily_news_flat:
         title = item.get("title") or ""
@@ -182,12 +249,61 @@ def _build_my_following_multi_tag(BASE, daily_news_flat, group_name, tags, date_
         if any(_tag_in_text(t, combined) for t in tags):
             candidates.append(dict(item))
 
+    print(f"  [多标签「{group_name}」] 预筛候选：{len(candidates)} 篇")
+
+    # 判断 LLM 是否可用
+    llm_available = False
+    try:
+        from llm_summary import _get_config
+        cfg = _get_config()
+        llm_available = bool((cfg.get("openclaw_base_url") or "").strip())
+    except Exception:
+        pass
+
     result = []
     for item in candidates:
         link = item.get("link") or ""
+        title = item.get("title") or ""
+        summary_rss = item.get("summary") or ""
+
+        if llm_available:
+            # ── AI 路径 ─────────────────────────────────────────────────────
+            try:
+                from llm_summary import all_tags_match_llm, summarize_with_llm
+                match = all_tags_match_llm(title, summary_rss, tags)
+            except Exception:
+                match = None
+
+            if match is False:
+                continue  # LLM 确认不相关，跳过
+            elif match is True:
+                # LLM 确认相关，抓正文生成高质量 AI 摘要
+                article_text = ""
+                if link:
+                    try:
+                        from article_parser import fetch_article
+                        article = fetch_article(link)
+                        article_text = (article.get("text") or "")[:50000] if article else ""
+                    except Exception:
+                        pass
+                try:
+                    llm_sum = summarize_with_llm(
+                        article_text or summary_rss,
+                        topic_hint=group_name,
+                        max_sentences=3
+                    )
+                    item["summary"] = llm_sum or (summarize(article_text, sentences=3) if article_text else summary_rss) or summary_rss
+                except Exception:
+                    item["summary"] = summarize(article_text, sentences=3) if article_text else summary_rss
+                result.append(item)
+                continue
+            # match is None：LLM 调用失败，降级到传统方法
+
+        # ── 传统回退路径（LLM 不可用或单次调用失败） ─────────────────────────
         if not link:
             continue
         try:
+            from article_parser import fetch_article
             article = fetch_article(link)
         except Exception:
             continue
@@ -195,10 +311,11 @@ def _build_my_following_multi_tag(BASE, daily_news_flat, group_name, tags, date_
             continue
         text = (article.get("text") or "")[:50000]
         title = item.get("title") or article.get("title") or ""
-        summary_rss = item.get("summary") or ""
         if not text or len(text) < 100:
             continue
+
         try:
+            from entity_extractor import extract_entities, write_entity
             entity_names = extract_entities(text)
         except Exception:
             entity_names = []
@@ -206,13 +323,20 @@ def _build_my_following_multi_tag(BASE, daily_news_flat, group_name, tags, date_
         if not _all_tags_in_article(tags, title, summary_rss, entity_names):
             continue
 
+        # 摘要：尝试 LLM，回退 sumy
         try:
-            item["summary"] = summarize(text, sentences=3) or summary_rss or text[:200]
+            from llm_summary import summarize_with_llm
+            llm_sum = summarize_with_llm(text, topic_hint=group_name, max_sentences=3)
+            item["summary"] = llm_sum or summarize(text, sentences=3) or summary_rss or text[:200]
         except Exception:
-            item["summary"] = summary_rss or text[:200]
+            try:
+                item["summary"] = summarize(text, sentences=3) or summary_rss or text[:200]
+            except Exception:
+                item["summary"] = summary_rss or text[:200]
 
         for e in entity_names:
             try:
+                from entity_extractor import write_entity
                 write_entity(BASE, e, date_str)
             except Exception:
                 pass
@@ -223,7 +347,7 @@ def _build_my_following_multi_tag(BASE, daily_news_flat, group_name, tags, date_
 
 def _build_my_following(daily_news_by_cat, keyword_groups, relevance_threshold, BASE, date_str, translate_zh_to_en_fn):
     """
-    合并单标签（标题+摘要契合度）与多标签（抓正文 + entities 全匹配）结果。
+    合并单标签（AI相关性/字符串匹配）与多标签（AI主题判断/实体提取）结果。
     返回 { "组名": [items], ... }。
     """
     flat = _flatten_daily_news(daily_news_by_cat)
@@ -250,12 +374,12 @@ def main():
     relevance_threshold = float(get_config("relevance_threshold") or 0.7)
     date_str = date.today().isoformat()
 
-    # 1) 每日新闻：从 OPML 拉取全部
+    # 1) 每日新闻：从 OPML 拉取全部，LLM 可选批量翻译标题
     daily_news = _fetch_all_daily_news()
     if daily_news:
         write_daily_news(BASE, daily_news)
 
-    # 2) 我的关注：分号表示多标签 AND，多标签时抓正文并用 entities+标题+摘要 全匹配；实体按日期写入 entities/YYYY-MM-DD/
+    # 2) 我的关注：AI 筛选（OpenClaw 可用时）或传统关键词匹配（回退）
     if daily_news and keyword_groups:
         follow_items = _build_my_following(
             daily_news, keyword_groups, relevance_threshold, BASE, date_str, translate_zh_to_en

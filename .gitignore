@@ -42,3 +42,5 @@ temp/
 # System
 Thumbs.db
 state/*.lock
+.env
+config.local.yaml
