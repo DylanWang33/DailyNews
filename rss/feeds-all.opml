@@ -289,6 +289,25 @@
 <outline text="Daring Fireball" title="Daring Fireball" type="rss" xmlUrl="https://daringfireball.net/feeds/main"  />
 <outline text="Six Colors" title="Six Colors" type="rss" xmlUrl="https://feedpress.me/sixcolors"  />
 </outline>
+<outline text="中东·时政" title="中东·时政">
+<outline text="Al Jazeera English" title="Al Jazeera English" type="rss" xmlUrl="https://www.aljazeera.com/xml/rss/all.xml"  />
+<outline text="Times of Israel" title="Times of Israel" type="rss" xmlUrl="https://www.timesofisrael.com/feed/"  />
+<outline text="Middle East Eye" title="Middle East Eye" type="rss" xmlUrl="https://www.middleeasteye.net/rss"  />
+<outline text="Al-Monitor" title="Al-Monitor" type="rss" xmlUrl="https://www.al-monitor.com/rss"  />
+<outline text="Responsible Statecraft" title="Responsible Statecraft" type="rss" xmlUrl="https://responsiblestatecraft.org/feed/"  />
+<outline text="Defense One" title="Defense One" type="rss" xmlUrl="https://www.defenseone.com/rss/all/"  />
+<outline text="Breaking Defense" title="Breaking Defense" type="rss" xmlUrl="https://breakingdefense.com/feed/"  />
+</outline>
+<outline text="英文国际" title="英文国际">
+<outline text="BBC World News" title="BBC World News" type="rss" xmlUrl="https://feeds.bbci.co.uk/news/world/rss.xml"  />
+<outline text="NYT World" title="NYT World" type="rss" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/World.xml"  />
+<outline text="The Guardian World" title="The Guardian World" type="rss" xmlUrl="https://www.theguardian.com/world/rss"  />
+<outline text="Washington Post World" title="Washington Post World" type="rss" xmlUrl="https://feeds.washingtonpost.com/rss/world"  />
+<outline text="CNN World" title="CNN World" type="rss" xmlUrl="http://rss.cnn.com/rss/edition_world.rss"  />
+<outline text="Axios" title="Axios" type="rss" xmlUrl="https://api.axios.com/feed/"  />
+<outline text="Foreign Policy" title="Foreign Policy" type="rss" xmlUrl="https://foreignpolicy.com/feed/"  />
+<outline text="Bloomberg Politics" title="Bloomberg Politics" type="rss" xmlUrl="https://feeds.bloomberg.com/politics/news.rss"  />
+</outline>
 <outline text="Other" title="Other">
 <outline text="Longreads" title="Longreads" type="rss" xmlUrl="https://plink.anyfeeder.com/longreads"  />
 </outline>
