@@ -1,0 +1,3 @@
+# Sweden
+
+entity type: unknown

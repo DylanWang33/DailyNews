@@ -1,0 +1,6 @@
+# DailyNews 配置（可选）
+# 指定 Obsidian 笔记库根目录后，新闻与简报会写到这里，便于在 Obsidian 中查看与双向链接
+obsidian_base: /Users/kryss/仓库/Dylan/DailyNews
+
+# 每轮最多保存多少篇新闻，达到后自动结束（避免一次跑太久）
+max_articles_per_run: 30

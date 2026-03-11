@@ -1,0 +1,3 @@
+# Slovakia
+
+entity type: unknown

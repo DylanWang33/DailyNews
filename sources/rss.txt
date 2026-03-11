@@ -1,0 +1,20 @@
+# 每行一个 RSS URL；或 显示名|URL
+# 本文件存在时优先于 rss.yaml 使用
+# 示例：
+# https://www.reuters.com/rssFeed/topNews
+# Reuters|https://www.reuters.com/rssFeed/topNews
+
+https://www.reuters.com/rssFeed/topNews
+https://feeds.bloomberg.com/markets/news.rss
+https://feeds.bbci.co.uk/news/rss.xml
+https://www.ft.com/?format=rss
+http://rss.cnn.com/rss/cnn_topstories.rss
+https://feeds.npr.org/1001/rss.xml
+https://www.theguardian.com/world/rss
+https://www.aljazeera.com/xml/rss/all.xml
+https://www.cnbc.com/id/100003114/device/rss/rss.html
+https://feeds.content.dowjones.io/public/rss/top_news
+https://www.politico.com/rss/politics08.xml
+https://techcrunch.com/feed/
+https://feeds.arstechnica.com/arstechnica/index
+https://hnrss.org/frontpage

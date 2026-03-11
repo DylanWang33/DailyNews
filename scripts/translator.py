@@ -63,10 +63,10 @@ TRANSLATOR = FROM_LANG.get_translation(TO_LANG)
 
 
 def translate(text):
-
-    if not text:
+    if not text or not isinstance(text, str):
         return ""
-
+    # 限制长度，避免内存与 API 滥用
+    text = text[:500_000]
     chunk_size = 2000
 
     parts = []

@@ -1,0 +1,3 @@
+# Norway
+
+entity type: unknown

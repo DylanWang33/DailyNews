@@ -1,0 +1,3 @@
+# Nicaragua
+
+entity type: unknown

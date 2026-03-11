@@ -1,3 +1,4 @@
+# RSS 源（若存在 sources/rss.txt 则优先使用 rss.txt）
 - name: Reuters
   url: https://www.reuters.com/rssFeed/topNews
 
@@ -5,7 +6,43 @@
   url: https://feeds.bloomberg.com/markets/news.rss
 
 - name: BBC
-  url: http://feeds.bbci.co.uk/news/rss.xml
+  url: https://feeds.bbci.co.uk/news/rss.xml
 
 - name: FT
   url: https://www.ft.com/?format=rss
+
+- name: AP Top News
+  url: https://rsshub.app/ap/top-news
+
+- name: CNN
+  url: http://rss.cnn.com/rss/cnn_topstories.rss
+
+- name: NPR
+  url: https://feeds.npr.org/1001/rss.xml
+
+- name: The Guardian
+  url: https://www.theguardian.com/world/rss
+
+- name: Al Jazeera
+  url: https://www.aljazeera.com/xml/rss/all.xml
+
+- name: CNBC
+  url: https://www.cnbc.com/id/100003114/device/rss/rss.html
+
+- name: WSJ
+  url: https://feeds.content.dowjones.io/public/rss/top_news
+
+- name: Politico
+  url: https://www.politico.com/rss/politics08.xml
+
+- name: Axios
+  url: https://api.axios.com/feed/
+
+- name: TechCrunch
+  url: https://techcrunch.com/feed/
+
+- name: Ars Technica
+  url: https://feeds.arstechnica.com/arstechnica/index
+
+- name: Hacker News
+  url: https://hnrss.org/frontpage

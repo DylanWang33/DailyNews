@@ -1,0 +1,3 @@
+# Latvia
+
+entity type: unknown

@@ -1,7 +1,11 @@
-# pip install -r requirements.txt 恢复必要环境命令
+# pip install -r requirements.txt 恢复环境
 feedparser
 newspaper3k
+nltk
 sumy
 spacy
 pyyaml
 lxml
+requests
+beautifulsoup4
+argostranslate

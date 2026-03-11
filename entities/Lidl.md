@@ -1,0 +1,3 @@
+# Lidl
+
+entity type: unknown

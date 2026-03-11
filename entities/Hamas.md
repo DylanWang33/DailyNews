@@ -1,0 +1,3 @@
+# Hamas
+
+entity type: unknown

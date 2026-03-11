@@ -1,0 +1,3 @@
+# Covid
+
+entity type: unknown
