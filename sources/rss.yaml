@@ -1,48 +1,989 @@
-# RSS 源（若存在 sources/rss.txt 则优先使用 rss.txt）
-- name: Reuters
-  url: https://www.reuters.com/rssFeed/topNews
+# RSS 源（由 rss/feeds-all.opml 生成，与 OPML 内容一致）
+# 中文分类下源带 lang: zh，抓取时优先。
 
-- name: Bloomberg
-  url: https://feeds.bloomberg.com/markets/news.rss
+- name: "喷嚏图卦"
+  url: https://plink.anyfeeder.com/pentitugua
+  lang: zh
 
-- name: BBC
-  url: https://feeds.bbci.co.uk/news/rss.xml
+- name: "iDaily 每日环球视野"
+  url: https://plink.anyfeeder.com/idaily/today
+  lang: zh
 
-- name: FT
-  url: https://www.ft.com/?format=rss
+- name: "抽屉新热榜"
+  url: https://plink.anyfeeder.com/chouti/hot
+  lang: zh
 
-- name: AP Top News
-  url: https://rsshub.app/ap/top-news
+- name: "求是网"
+  url: https://plink.anyfeeder.com/qstheory
+  lang: zh
 
-- name: CNN
-  url: http://rss.cnn.com/rss/cnn_topstories.rss
+- name: "网易新闻 / 今日关注"
+  url: https://plink.anyfeeder.com/netease/today
+  lang: zh
 
-- name: NPR
-  url: https://feeds.npr.org/1001/rss.xml
+- name: "新华网 / 新华社新闻"
+  url: https://plink.anyfeeder.com/newscn/whxw
+  lang: zh
 
-- name: The Guardian
-  url: https://www.theguardian.com/world/rss
+- name: "联合早报 / 中国"
+  url: https://plink.anyfeeder.com/zaobao/realtime/china
+  lang: zh
 
-- name: Al Jazeera
-  url: https://www.aljazeera.com/xml/rss/all.xml
+- name: "联合早报 / 国际"
+  url: https://plink.anyfeeder.com/zaobao/realtime/world
+  lang: zh
 
-- name: CNBC
-  url: https://www.cnbc.com/id/100003114/device/rss/rss.html
+- name: "南方周末 / 新闻"
+  url: https://plink.anyfeeder.com/infzm/news
+  lang: zh
 
-- name: WSJ
-  url: https://feeds.content.dowjones.io/public/rss/top_news
+- name: "南方周末 / 推荐"
+  url: https://plink.anyfeeder.com/infzm/recommends
+  lang: zh
 
-- name: Politico
-  url: https://www.politico.com/rss/politics08.xml
+- name: "澎湃新闻"
+  url: https://plink.anyfeeder.com/thepaper
+  lang: zh
 
-- name: Axios
-  url: https://api.axios.com/feed/
+- name: "人民网 / 头条"
+  url: https://plink.anyfeeder.com/people
+  lang: zh
 
-- name: TechCrunch
-  url: https://techcrunch.com/feed/
+- name: "人民网 / 国内新闻"
+  url: https://plink.anyfeeder.com/people/politics
+  lang: zh
 
-- name: Ars Technica
-  url: https://feeds.arstechnica.com/arstechnica/index
+- name: "人民网 / 国际新闻"
+  url: https://plink.anyfeeder.com/people/world
+  lang: zh
 
-- name: Hacker News
-  url: https://hnrss.org/frontpage
+- name: "人民网 / 英语新闻"
+  url: https://plink.anyfeeder.com/people/english
+  lang: zh
+
+- name: "新京报"
+  url: https://plink.anyfeeder.com/bjnews
+  lang: zh
+
+- name: "人民日报"
+  url: https://plink.anyfeeder.com/people-daily
+  lang: zh
+
+- name: "光明日报"
+  url: https://plink.anyfeeder.com/guangmingribao
+  lang: zh
+
+- name: "解放军报"
+  url: https://plink.anyfeeder.com/jiefangjunbao
+  lang: zh
+
+- name: "中国日报 / 双语新闻"
+  url: https://plink.anyfeeder.com/chinadaily/dual
+  lang: zh
+
+- name: "中国日报 / 专栏"
+  url: https://plink.anyfeeder.com/chinadaily/column
+  lang: zh
+
+- name: "中国日报 / 时政"
+  url: https://plink.anyfeeder.com/chinadaily/china
+  lang: zh
+
+- name: "中国日报 / 资讯"
+  url: https://plink.anyfeeder.com/chinadaily/world
+  lang: zh
+
+- name: "中国日报 / 财经"
+  url: https://plink.anyfeeder.com/chinadaily/caijing
+  lang: zh
+
+- name: "喷嚏网 / 铂程斋"
+  url: https://plink.anyfeeder.com/dapenti/xilei
+  lang: zh
+
+- name: "腾讯新闻 / 国际"
+  url: https://plink.anyfeeder.com/qq/news/world
+  lang: zh
+
+- name: "腾讯新闻 / 国内"
+  url: https://plink.anyfeeder.com/qq/news/china
+  lang: zh
+
+- name: "界面新闻: 新闻"
+  url: https://plink.anyfeeder.com/jiemian/news
+  lang: zh
+
+- name: "Solidot"
+  url: https://www.solidot.org/index.rss
+  lang: zh
+
+- name: "数字尾巴"
+  url: https://plink.anyfeeder.com/dgtle
+  lang: zh
+
+- name: "36氪"
+  url: https://plink.anyfeeder.com/36kr
+  lang: zh
+
+- name: "cnBeta"
+  url: https://plink.anyfeeder.com/cnbeta
+  lang: zh
+
+- name: "IT 之家"
+  url: https://plink.anyfeeder.com/ithome/it
+  lang: zh
+
+- name: "MIT 科技评论 / 本周热榜"
+  url: https://plink.anyfeeder.com/mittrchina/hot
+  lang: zh
+
+- name: "Readhub / 热门话题"
+  url: https://plink.anyfeeder.com/readhub/topic
+  lang: zh
+
+- name: "Readhub / 每日早报"
+  url: https://plink.anyfeeder.com/readhub/daily
+  lang: zh
+
+- name: "Readhub / 区块链快讯"
+  url: https://plink.anyfeeder.com/readhub/blockchain
+  lang: zh
+
+- name: "爱范儿"
+  url: https://plink.anyfeeder.com/ifanr
+  lang: zh
+
+- name: "果壳网 / 科学人"
+  url: https://plink.anyfeeder.com/guokr/scientific
+  lang: zh
+
+- name: "虎嗅"
+  url: https://plink.anyfeeder.com/huxiu
+  lang: zh
+
+- name: "机核"
+  url: https://plink.anyfeeder.com/gcores
+  lang: zh
+
+- name: "快科技"
+  url: https://plink.anyfeeder.com/mydrivers
+  lang: zh
+
+- name: "雷峰网"
+  url: https://plink.anyfeeder.com/leiphone
+  lang: zh
+
+- name: "软餐 - 新鲜软件资讯"
+  url: https://plink.anyfeeder.com/ruancan
+  lang: zh
+
+- name: "少数派"
+  url: https://plink.anyfeeder.com/sspai
+  lang: zh
+
+- name: "少数派 / Matrix"
+  url: https://plink.anyfeeder.com/ssapi/matrix
+  lang: zh
+
+- name: "新浪专栏 / 创事记"
+  url: https://plink.anyfeeder.com/sina/csj
+  lang: zh
+
+- name: "极客公园"
+  url: https://plink.anyfeeder.com/geekpark
+  lang: zh
+
+- name: "小众软件"
+  url: https://plink.anyfeeder.com/appinn
+  lang: zh
+
+- name: "超能网"
+  url: https://plink.anyfeeder.com/expreview
+  lang: zh
+
+- name: "钛媒体"
+  url: https://plink.anyfeeder.com/tmtpost
+  lang: zh
+
+- name: "猎云网"
+  url: https://plink.anyfeeder.com/lieyunwang
+  lang: zh
+
+- name: "品玩"
+  url: https://plink.anyfeeder.com/pingwest
+  lang: zh
+
+- name: "湾区日报"
+  url: https://wanqu.co/feed/
+  lang: zh
+
+- name: "晚晴幽草轩"
+  url: https://www.jeffjade.com/atom.xml
+  lang: zh
+
+- name: "阮一峰的网络日志"
+  url: https://www.ruanyifeng.com/blog/atom.xml
+  lang: zh
+
+- name: "知乎日报"
+  url: https://plink.anyfeeder.com/zhihu/daily
+  lang: zh
+
+- name: "知乎每日精选"
+  url: http://www.zhihu.com/rss
+  lang: zh
+
+- name: "简书 / 首页"
+  url: https://plink.anyfeeder.com/jianshu/home
+  lang: zh
+
+- name: "简书: 热门"
+  url: https://plink.anyfeeder.com/jianshu/trending/weekly
+  lang: zh
+
+- name: "知乎热榜"
+  url: https://plink.anyfeeder.com/zhihu/hotlist
+  lang: zh
+
+- name: "人人都是产品经理"
+  url: https://plink.anyfeeder.com/woshipm/popular
+  lang: zh
+
+- name: "维基百科优良条目"
+  url: https://zh.wikipedia.org/w/api.php?action=featuredfeed&feed=good&feedformat=atom
+  lang: zh
+
+- name: "BBC 英语教学"
+  url: https://plink.anyfeeder.com/bbc/learningenglish
+  lang: zh
+
+- name: "观止·每日一文"
+  url: https://plink.anyfeeder.com/meiriyiwen
+  lang: zh
+
+- name: "豆瓣最受欢迎的影评"
+  url: https://plink.anyfeeder.com/douban/review/movie
+  lang: zh
+
+- name: "豆瓣最受欢迎的书评"
+  url: https://plink.anyfeeder.com/douban/review/book
+  lang: zh
+
+- name: "雪球 / 今日话题"
+  url: https://plink.anyfeeder.com/xueqiu/today
+  lang: zh
+
+- name: "雪球 / 热帖"
+  url: https://plink.anyfeeder.com/xueqiu/hot
+  lang: zh
+
+- name: "财富中文网"
+  url: https://plink.anyfeeder.com/fortunechina
+  lang: zh
+
+- name: "财富中文网 / 商业"
+  url: https://plink.anyfeeder.com/fortunechina/shangye
+  lang: zh
+
+- name: "财富中文网 / 领导力"
+  url: https://plink.anyfeeder.com/fortunechina/lindgaoli
+  lang: zh
+
+- name: "财富中文网 / 科技"
+  url: https://plink.anyfeeder.com/fortunechina/keji
+  lang: zh
+
+- name: "财富中文网 / 研究"
+  url: https://plink.anyfeeder.com/fortunechina/report
+  lang: zh
+
+- name: "经济日报"
+  url: https://plink.anyfeeder.com/jingjiribao
+  lang: zh
+
+- name: "喷嚏网 / 财经风云"
+  url: https://plink.anyfeeder.com/dapenti/caijing
+  lang: zh
+
+- name: "经济观察网"
+  url: https://plink.anyfeeder.com/eeo
+  lang: zh
+
+- name: "界面新闻: 商业"
+  url: https://plink.anyfeeder.com/jiemian/business
+  lang: zh
+
+- name: "界面新闻: 财经"
+  url: https://plink.anyfeeder.com/jiemian/finance
+  lang: zh
+
+- name: "微博 / 热搜榜"
+  url: https://plink.anyfeeder.com/weibo/search/hot
+  lang: zh
+
+- name: "煎蛋"
+  url: https://plink.anyfeeder.com/jiandan
+  lang: zh
+
+- name: "理想生活实验室"
+  url: https://plink.anyfeeder.com/toodaylab
+  lang: zh
+
+- name: "InfoQ 中文"
+  url: https://plink.anyfeeder.com/infoq/recommend
+  lang: zh
+
+- name: "Readhub / 开发者资讯"
+  url: https://plink.anyfeeder.com/readhub/technews
+  lang: zh
+
+- name: "Linux 中国"
+  url: https://plink.anyfeeder.com/linux.cn
+  lang: zh
+
+- name: "开发者头条"
+  url: https://plink.anyfeeder.com/toutiao.io
+  lang: zh
+
+- name: "FreeBuf 关注黑客"
+  url: https://plink.anyfeeder.com/freebuf
+  lang: zh
+
+- name: "Aljazeera半岛网 / 新闻"
+  url: https://plink.anyfeeder.com/aljazeera/news
+  lang: zh
+
+- name: "SBS 中文"
+  url: https://plink.anyfeeder.com/sbs/chinese
+  lang: zh
+
+- name: "VOA 美国之音"
+  url: https://plink.anyfeeder.com/voa/chinese
+  lang: zh
+
+- name: "端传媒 / 最新"
+  url: https://plink.anyfeeder.com/initium/latest
+  lang: zh
+
+- name: "端传媒 / 深度"
+  url: https://plink.anyfeeder.com/initium/feature
+  lang: zh
+
+- name: "路透中文"
+  url: https://plink.anyfeeder.com/reuters/cn
+  lang: zh
+
+- name: "华尔街日报中文版"
+  url: https://plink.anyfeeder.com/wsj/cn
+  lang: zh
+
+- name: "纽约时报中文网"
+  url: https://plink.anyfeeder.com/nytimes/cn
+  lang: zh
+
+- name: "BBC 中文版"
+  url: https://plink.anyfeeder.com/bbc/cn
+  lang: zh
+
+- name: "RFI 法国国际广播电台"
+  url: https://plink.anyfeeder.com/rfi/cn
+  lang: zh
+
+- name: "ABC 澳大利亚广播公司"
+  url: https://plink.anyfeeder.com/abc/cn
+  lang: zh
+
+- name: "纽约时报双语版"
+  url: https://plink.anyfeeder.com/nytimes/dual
+  lang: zh
+
+- name: "caoz的梦呓"
+  url: https://plink.anyfeeder.com/weixin/caozsay
+  lang: zh
+
+- name: "keso怎么看"
+  url: https://plink.anyfeeder.com/weixin/kesoview
+  lang: zh
+
+- name: "读库小报"
+  url: https://plink.anyfeeder.com/weixin/dukuxiaobao
+  lang: zh
+
+- name: "南方周末"
+  url: https://plink.anyfeeder.com/weixin/nanfangzhoumo
+  lang: zh
+
+- name: "经济学人"
+  url: https://plink.anyfeeder.com/weixin/theeconomist
+  lang: zh
+
+- name: "三联生活周刊"
+  url: https://plink.anyfeeder.com/weixin/lifeweek
+  lang: zh
+
+- name: "单读"
+  url: https://plink.anyfeeder.com/weixin/dandureading
+  lang: zh
+
+- name: "新世相"
+  url: https://plink.anyfeeder.com/weixin/thefair2
+  lang: zh
+
+- name: "连岳"
+  url: https://plink.anyfeeder.com/weixin/ilianyue
+  lang: zh
+
+- name: "南都周刊"
+  url: https://plink.anyfeeder.com/weixin/nbweekly
+  lang: zh
+
+- name: "人民日报"
+  url: https://plink.anyfeeder.com/weixin/rmrbwx
+  lang: zh
+
+- name: "十点读书"
+  url: https://plink.anyfeeder.com/weixin/duhaoshu
+  lang: zh
+
+- name: "洞见"
+  url: https://plink.anyfeeder.com/weixin/DJ00123987
+  lang: zh
+
+- name: "医学界"
+  url: https://plink.anyfeeder.com/weixin/yixuejiezazhi
+  lang: zh
+
+- name: "央视财经"
+  url: https://plink.anyfeeder.com/weixin/cctvyscj
+  lang: zh
+
+- name: "阑夕"
+  url: https://plink.anyfeeder.com/weixin/techread
+  lang: zh
+
+- name: "半月谈"
+  url: https://plink.anyfeeder.com/weixin/banyuetan-weixin
+  lang: zh
+
+- name: "理想岛"
+  url: https://plink.anyfeeder.com/weixin/lixiangdao002
+  lang: zh
+
+- name: "六神磊磊读金庸"
+  url: https://plink.anyfeeder.com/weixin/dujinyong6
+  lang: zh
+
+- name: "魔宙"
+  url: https://plink.anyfeeder.com/weixin/mzmojo
+  lang: zh
+
+- name: "东哥解读电商"
+  url: https://plink.anyfeeder.com/weixin/dgjdds
+  lang: zh
+
+- name: "书单来了"
+  url: https://plink.anyfeeder.com/weixin/shudanlaile
+  lang: zh
+
+- name: "ImportNew"
+  url: https://plink.anyfeeder.com/weixin/importnew
+  lang: zh
+
+- name: "界面"
+  url: https://plink.anyfeeder.com/weixin/wowjiemian
+  lang: zh
+
+- name: "人人都是产品经理"
+  url: https://plink.anyfeeder.com/weixin/woshipm
+  lang: zh
+
+- name: "架构师之路"
+  url: https://plink.anyfeeder.com/weixin/gh_10a6b96351a9
+  lang: zh
+
+- name: "青年文摘"
+  url: https://plink.anyfeeder.com/weixin/qnwzwx
+  lang: zh
+
+- name: "历史研习社"
+  url: https://plink.anyfeeder.com/weixin/mingqinghistory
+  lang: zh
+
+- name: "译言"
+  url: https://plink.anyfeeder.com/weixin/yeeyancom
+  lang: zh
+
+- name: "真实故事计划"
+  url: https://plink.anyfeeder.com/weixin/zhenshigushi1
+  lang: zh
+
+- name: "知识分子"
+  url: https://plink.anyfeeder.com/weixin/The-Intellectual
+  lang: zh
+
+- name: "财新网"
+  url: https://plink.anyfeeder.com/weixin/caixinwang
+  lang: zh
+
+- name: "侠客岛"
+  url: https://plink.anyfeeder.com/weixin/xiake_island
+  lang: zh
+
+- name: "棱镜"
+  url: https://plink.anyfeeder.com/weixin/lengjing_qqfinance
+  lang: zh
+
+- name: "香港凤凰周刊"
+  url: https://plink.anyfeeder.com/weixin/phoenixweekly
+  lang: zh
+
+- name: "国家人文历史"
+  url: https://plink.anyfeeder.com/weixin/gjrwls
+  lang: zh
+
+- name: "机器之心"
+  url: https://plink.anyfeeder.com/weixin/almosthuman2014
+  lang: zh
+
+- name: "果壳网"
+  url: https://plink.anyfeeder.com/weixin/Guokr42
+  lang: zh
+
+- name: "虹膜"
+  url: https://plink.anyfeeder.com/weixin/IrisMagazine
+  lang: zh
+
+- name: "新京报书评周刊"
+  url: https://plink.anyfeeder.com/weixin/ibookreview
+  lang: zh
+
+- name: "环球时报"
+  url: https://plink.anyfeeder.com/weixin/hqsbwx
+  lang: zh
+
+- name: "铁血军事"
+  url: https://plink.anyfeeder.com/weixin/tiexuejunshi
+  lang: zh
+
+- name: "人民网"
+  url: https://plink.anyfeeder.com/weixin/people_rmw
+  lang: zh
+
+- name: "丁香医生"
+  url: https://plink.anyfeeder.com/weixin/DingXiangYiSheng
+  lang: zh
+
+- name: "澎湃新闻"
+  url: https://plink.anyfeeder.com/weixin/thepapernews
+  lang: zh
+
+- name: "新华网"
+  url: https://plink.anyfeeder.com/weixin/newsxinhua
+  lang: zh
+
+- name: "糗事百科"
+  url: https://plink.anyfeeder.com/weixin/qiubai2005
+  lang: zh
+
+- name: "虎嗅网"
+  url: https://plink.anyfeeder.com/weixin/huxiu_com
+  lang: zh
+
+- name: "参考消息"
+  url: https://plink.anyfeeder.com/weixin/ckxxwx
+  lang: zh
+
+- name: "Vista看天下"
+  url: https://plink.anyfeeder.com/weixin/vistaweek
+  lang: zh
+
+- name: "小道消息"
+  url: https://plink.anyfeeder.com/weixin/WebNotes
+  lang: zh
+
+- name: "有书"
+  url: https://plink.anyfeeder.com/weixin/youshucc
+  lang: zh
+
+- name: "简书"
+  url: https://plink.anyfeeder.com/weixin/jianshuio
+  lang: zh
+
+- name: "经济观察报"
+  url: https://plink.anyfeeder.com/weixin/eeo-com-cn
+  lang: zh
+
+- name: "第一财经周刊"
+  url: https://plink.anyfeeder.com/weixin/CBNweekly2008
+  lang: zh
+
+- name: "MacTalk"
+  url: https://plink.anyfeeder.com/weixin/sagacity-mac
+  lang: zh
+
+- name: "新浪体育"
+  url: https://plink.anyfeeder.com/weixin/sports_sina
+  lang: zh
+
+- name: "华尔街见闻"
+  url: https://plink.anyfeeder.com/weixin/wallstreetcn
+  lang: zh
+
+- name: "吴晓波频道"
+  url: https://plink.anyfeeder.com/weixin/wuxiaobopd
+  lang: zh
+
+- name: "21世纪经济报道"
+  url: https://plink.anyfeeder.com/weixin/jjbd21
+  lang: zh
+
+- name: "前端之巅"
+  url: https://plink.anyfeeder.com/weixin/frontshow
+  lang: zh
+
+- name: "丁香妈妈"
+  url: https://plink.anyfeeder.com/weixin/DingXiangMaMi
+  lang: zh
+
+- name: "人物"
+  url: https://plink.anyfeeder.com/weixin/renwumag1980
+  lang: zh
+
+- name: "看理想"
+  url: https://plink.anyfeeder.com/weixin/ikanlixiang
+  lang: zh
+
+- name: "罗辑思维"
+  url: https://plink.anyfeeder.com/weixin/luojisw
+  lang: zh
+
+- name: "Knowyourself"
+  url: https://plink.anyfeeder.com/weixin/knowyourself2015
+  lang: zh
+
+- name: "读小库"
+  url: https://plink.anyfeeder.com/weixin/duxiaoku666
+  lang: zh
+
+- name: "槽边往事"
+  url: https://plink.anyfeeder.com/weixin/bitsea
+  lang: zh
+
+- name: "脑洞故事板"
+  url: https://plink.anyfeeder.com/weixin/ndgs233
+  lang: zh
+
+- name: "环球科学"
+  url: https://plink.anyfeeder.com/weixin/ScientificAmerican
+  lang: zh
+
+- name: "地球知识局"
+  url: https://plink.anyfeeder.com/weixin/diqiuzhishiju
+  lang: zh
+
+- name: "中国国家地理"
+  url: https://plink.anyfeeder.com/weixin/dili360
+  lang: zh
+
+- name: "雪球"
+  url: https://plink.anyfeeder.com/weixin/xueqiujinghua
+  lang: zh
+
+- name: "微软研究院AI头条"
+  url: https://plink.anyfeeder.com/weixin/MSRAsia
+  lang: zh
+
+- name: "新智元"
+  url: https://plink.anyfeeder.com/weixin/AI_era
+  lang: zh
+
+- name: "长安街知事"
+  url: https://plink.anyfeeder.com/weixin/capitalnews
+  lang: zh
+
+- name: "腾讯科技"
+  url: https://plink.anyfeeder.com/weixin/qqtech
+  lang: zh
+
+- name: "科技美学"
+  url: https://plink.anyfeeder.com/weixin/kejimx
+  lang: zh
+
+- name: "CSDN"
+  url: https://plink.anyfeeder.com/weixin/CSDNnews
+  lang: zh
+
+- name: "唐书房"
+  url: https://plink.anyfeeder.com/weixin/clouds70
+  lang: zh
+
+- name: "毛有话说"
+  url: https://plink.anyfeeder.com/weixin/mao-talk
+  lang: zh
+
+- name: "搬砖小组"
+  url: https://plink.anyfeeder.com/weixin/banzhuanxiaozu
+  lang: zh
+
+- name: "一天一篇经济学人(双语)"
+  url: https://plink.anyfeeder.com/weixin/Economist_fans
+  lang: zh
+
+- name: "央视新闻"
+  url: https://plink.anyfeeder.com/weixin/cctvnewscenter
+  lang: zh
+
+- name: "MOOC"
+  url: https://plink.anyfeeder.com/weixin/mooc
+  lang: zh
+
+- name: "三节课"
+  url: https://plink.anyfeeder.com/weixin/sanjieke01
+  lang: zh
+
+- name: "利维坦"
+  url: https://plink.anyfeeder.com/weixin/liweitan2014
+  lang: zh
+
+- name: "饭统戴老板"
+  url: https://plink.anyfeeder.com/weixin/worldofboss
+  lang: zh
+
+- name: "刘润"
+  url: https://plink.anyfeeder.com/weixin/runliu-pub
+  lang: zh
+
+- name: "笔记侠"
+  url: https://plink.anyfeeder.com/weixin/Notesman
+  lang: zh
+
+- name: "张佳玮写字的地方"
+  url: https://plink.anyfeeder.com/weixin/zhangjiawei_1983
+  lang: zh
+
+- name: "德林社"
+  url: https://plink.anyfeeder.com/weixin/delinshe
+  lang: zh
+
+- name: "中国企业家杂志"
+  url: https://plink.anyfeeder.com/weixin/iceo-com-cn
+  lang: zh
+
+- name: "新经济100人"
+  url: https://plink.anyfeeder.com/weixin/qiyejiagc
+  lang: zh
+
+- name: "新财富"
+  url: https://plink.anyfeeder.com/weixin/newfortune
+  lang: zh
+
+- name: "福布斯"
+  url: https://plink.anyfeeder.com/weixin/forbes_china
+  lang: zh
+
+- name: "美股研究社"
+  url: https://plink.anyfeeder.com/weixin/meigushe
+  lang: zh
+
+- name: "X博士"
+  url: https://plink.anyfeeder.com/weixin/doctorx666
+  lang: zh
+
+- name: "科学松鼠会"
+  url: https://plink.anyfeeder.com/weixin/SquirrelClub
+  lang: zh
+
+- name: "物种日历"
+  url: https://plink.anyfeeder.com/weixin/guokrpac
+  lang: zh
+
+- name: "叶檀财经"
+  url: https://plink.anyfeeder.com/weixin/tancaijing
+  lang: zh
+
+- name: "LinkedIn 领英"
+  url: https://plink.anyfeeder.com/weixin/LinkedIn-China
+  lang: zh
+
+- name: "哈佛商业评论"
+  url: https://plink.anyfeeder.com/weixin/hbrchinese
+  lang: zh
+
+- name: "猫笔刀"
+  url: https://plink.anyfeeder.com/weixin/maobidao
+  lang: zh
+
+- name: "经济学原理"
+  url: https://plink.anyfeeder.com/weixin/jingjixue_yuanli
+  lang: zh
+
+- name: "CGTN: Top News"
+  url: https://plink.anyfeeder.com/cgtn/top
+
+- name: "CGTN: Opinions"
+  url: https://plink.anyfeeder.com/cgtn/opinions
+
+- name: "CGTN: Editors' Pick"
+  url: https://plink.anyfeeder.com/cgtn/pick
+
+- name: "Sixth Tone"
+  url: https://plink.anyfeeder.com/sixthtone
+
+- name: "BBC / Top Stories"
+  url: https://plink.anyfeeder.com/bbc
+
+- name: "BBC / World"
+  url: https://plink.anyfeeder.com/bbc/world
+
+- name: "BBC / UK"
+  url: https://plink.anyfeeder.com/bbc/uk
+
+- name: "BBC / Business"
+  url: https://plink.anyfeeder.com/bbc/business
+
+- name: "BBC / politics"
+  url: https://plink.anyfeeder.com/bbc/politics
+
+- name: "BBC / Health"
+  url: https://plink.anyfeeder.com/bbc/health
+
+- name: "BBC / Education & Family"
+  url: https://plink.anyfeeder.com/bbc/education
+
+- name: "BBC / Science & Environment"
+  url: https://plink.anyfeeder.com/bbc/science_and_environment
+
+- name: "BBC / Technology"
+  url: https://plink.anyfeeder.com/bbc/technology
+
+- name: "BBC / Entertainment & Arts"
+  url: https://plink.anyfeeder.com/bbc/entertainment_and_arts
+
+- name: "Economist / Leaders"
+  url: https://plink.anyfeeder.com/economist/leaders
+
+- name: "Economist / Briefing"
+  url: https://plink.anyfeeder.com/economist/briefing
+
+- name: "Economist / United States"
+  url: https://plink.anyfeeder.com/economist/us-politics
+
+- name: "Economist / The Americas"
+  url: https://plink.anyfeeder.com/economist/americas
+
+- name: "Economist / Asia"
+  url: https://plink.anyfeeder.com/economist/asia
+
+- name: "Economist / China"
+  url: https://plink.anyfeeder.com/economist/china-politics
+
+- name: "Economist / Middle East & Africa"
+  url: https://plink.anyfeeder.com/economist/middle-east-africa
+
+- name: "Economist / Europe"
+  url: https://plink.anyfeeder.com/economist/europe
+
+- name: "Economist / Britain"
+  url: https://plink.anyfeeder.com/economist/britain
+
+- name: "Economist / International"
+  url: https://plink.anyfeeder.com/economist/international
+
+- name: "Economist / Business"
+  url: https://plink.anyfeeder.com/economist/business-finance
+
+- name: "Economist / Finance & economics"
+  url: https://plink.anyfeeder.com/economist/economics
+
+- name: "Economist / Science & technology"
+  url: https://plink.anyfeeder.com/economist/science-technology
+
+- name: "Economist / Culture"
+  url: https://plink.anyfeeder.com/economist/culture
+
+- name: "The New Yorker / News"
+  url: https://plink.anyfeeder.com/newyorker/news
+
+- name: "The New Yorker / Culture"
+  url: https://plink.anyfeeder.com/newyorker/culture
+
+- name: "The New Yorker / Humor"
+  url: https://plink.anyfeeder.com/newyorker/humor
+
+- name: "TIME"
+  url: https://plink.anyfeeder.com/time
+
+- name: "Motherboard"
+  url: https://plink.anyfeeder.com/vice/motherboard
+
+- name: "ZeroHedge"
+  url: https://plink.anyfeeder.com/zerohedge
+
+- name: "Business Insider"
+  url: https://plink.anyfeeder.com/businessinsider
+
+- name: "Gawker"
+  url: https://plink.anyfeeder.com/gawker
+
+- name: "The Atlantic"
+  url: https://plink.anyfeeder.com/theatlantic
+
+- name: "Vice"
+  url: https://plink.anyfeeder.com/vice
+
+- name: "WIRED / Top Stories"
+  url: https://plink.anyfeeder.com/wired/top-stories
+
+- name: "WIRED / Business"
+  url: https://plink.anyfeeder.com/wired/business
+
+- name: "WIRED / Artificial Intelligence"
+  url: https://plink.anyfeeder.com/wired/ai
+
+- name: "WIRED / Culture"
+  url: https://plink.anyfeeder.com/wired/culture
+
+- name: "WIRED / Tech"
+  url: https://plink.anyfeeder.com/wired/gear
+
+- name: "WIRED / Ideas"
+  url: https://plink.anyfeeder.com/wired/ideas
+
+- name: "WIRED / Science"
+  url: https://plink.anyfeeder.com/wired/science
+
+- name: "WIRED / Security"
+  url: https://plink.anyfeeder.com/wired/security
+
+- name: "WIRED / Backchannel"
+  url: https://plink.anyfeeder.com/wired/backchannel
+
+- name: "CSS-Tricks"
+  url: https://css-tricks.com/feed/
+
+- name: "web.dev"
+  url: https://web.dev/feed.xml
+
+- name: "The Verge"
+  url: https://plink.anyfeeder.com/verge
+
+- name: "Ars Technica"
+  url: https://plink.anyfeeder.com/arstechnica
+
+- name: "ExtremeTech"
+  url: https://plink.anyfeeder.com/extremetech
+
+- name: "TechCrunch"
+  url: https://plink.anyfeeder.com/techcrunch
+
+- name: "9to5Mac"
+  url: https://plink.anyfeeder.com/9to5mac
+
+- name: "Daring Fireball"
+  url: https://daringfireball.net/feeds/main
+
+- name: "Six Colors"
+  url: https://feedpress.me/sixcolors
+
+- name: "Longreads"
+  url: https://plink.anyfeeder.com/longreads

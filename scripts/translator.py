@@ -60,6 +60,11 @@ def install_model():
 FROM_LANG, TO_LANG = install_model()
 
 TRANSLATOR = FROM_LANG.get_translation(TO_LANG)
+# 中文→英文（用于关键词回退匹配）
+try:
+    TRANSLATOR_ZH2EN = TO_LANG.get_translation(FROM_LANG)
+except Exception:
+    TRANSLATOR_ZH2EN = None
 
 
 def translate(text):
@@ -94,3 +99,15 @@ def translate(text):
             result.append(p)
 
     return "\n".join(result)
+
+
+def translate_zh_to_en(text):
+    """中文→英文，用于关键词在英文正文中的回退匹配。"""
+    if not text or not isinstance(text, str):
+        return ""
+    if not TRANSLATOR_ZH2EN:
+        return ""
+    try:
+        return TRANSLATOR_ZH2EN.translate(text.strip()[:500])
+    except Exception:
+        return ""

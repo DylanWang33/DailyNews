@@ -19,5 +19,8 @@ if [[ ! -x "${REPO}/venv/bin/python" ]]; then
   exit 1
 fi
 
+# 将阅读样式同步到 Obsidian 库（若已配置 obsidian_base），便于排版生效
+"${REPO}/venv/bin/python" "${REPO}/scripts/install_obsidian_css.py" 2>/dev/null || true
+
 "${REPO}/venv/bin/python" "${REPO}/scripts/fetch_news.py"
 exit $?

@@ -3,7 +3,11 @@
 import requests
 from bs4 import BeautifulSoup
 
-from config import ALLOWED_URL_SCHEMES, REQUEST_TIMEOUT, MAX_ARTICLE_LENGTH
+from config import ALLOWED_URL_SCHEMES, get_config, MAX_ARTICLE_LENGTH
+
+def _timeout():
+    t = get_config("request_timeout")
+    return int(t) if t is not None else 25
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
@@ -20,7 +24,7 @@ def fetch_bloomberg(url):
     if not _is_safe_url(url):
         return None
     try:
-        r = requests.get(url, headers=HEADERS, timeout=REQUEST_TIMEOUT)
+        r = requests.get(url, headers=HEADERS, timeout=_timeout())
         if r.status_code != 200:
             return None
         soup = BeautifulSoup(r.text, "html.parser")

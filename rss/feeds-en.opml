@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <opml version="1.0">
+      <head>
+        <title>Feeds [https://plink.anyfeeder.com]</title>
+      </head>
+      <body>
+      
+<outline text="News" title="News">
+<outline text="CGTN: Top News" title="CGTN: Top News" type="rss" xmlUrl="https://plink.anyfeeder.com/cgtn/top"  />
+<outline text="CGTN: Opinions" title="CGTN: Opinions" type="rss" xmlUrl="https://plink.anyfeeder.com/cgtn/opinions"  />
+<outline text="CGTN: Editors&#039; Pick" title="CGTN: Editors&#039; Pick" type="rss" xmlUrl="https://plink.anyfeeder.com/cgtn/pick"  />
+<outline text="Sixth Tone" title="Sixth Tone" type="rss" xmlUrl="https://plink.anyfeeder.com/sixthtone"  />
+<outline text="BBC / Top Stories" title="BBC / Top Stories" type="rss" xmlUrl="https://plink.anyfeeder.com/bbc"  />
+<outline text="BBC / World" title="BBC / World" type="rss" xmlUrl="https://plink.anyfeeder.com/bbc/world"  />
+<outline text="BBC / UK" title="BBC / UK" type="rss" xmlUrl="https://plink.anyfeeder.com/bbc/uk"  />
+<outline text="BBC / Business" title="BBC / Business" type="rss" xmlUrl="https://plink.anyfeeder.com/bbc/business"  />
+<outline text="BBC / politics" title="BBC / politics" type="rss" xmlUrl="https://plink.anyfeeder.com/bbc/politics"  />
+<outline text="BBC / Health" title="BBC / Health" type="rss" xmlUrl="https://plink.anyfeeder.com/bbc/health"  />
+<outline text="BBC / Education &amp; Family" title="BBC / Education &amp; Family" type="rss" xmlUrl="https://plink.anyfeeder.com/bbc/education"  />
+<outline text="BBC / Science &amp; Environment" title="BBC / Science &amp; Environment" type="rss" xmlUrl="https://plink.anyfeeder.com/bbc/science_and_environment"  />
+<outline text="BBC / Technology" title="BBC / Technology" type="rss" xmlUrl="https://plink.anyfeeder.com/bbc/technology"  />
+<outline text="BBC / Entertainment &amp; Arts" title="BBC / Entertainment &amp; Arts" type="rss" xmlUrl="https://plink.anyfeeder.com/bbc/entertainment_and_arts"  />
+<outline text="Economist / Leaders" title="Economist / Leaders" type="rss" xmlUrl="https://plink.anyfeeder.com/economist/leaders"  />
+<outline text="Economist / Briefing" title="Economist / Briefing" type="rss" xmlUrl="https://plink.anyfeeder.com/economist/briefing"  />
+<outline text="Economist / United States" title="Economist / United States" type="rss" xmlUrl="https://plink.anyfeeder.com/economist/us-politics"  />
+<outline text="Economist / The Americas" title="Economist / The Americas" type="rss" xmlUrl="https://plink.anyfeeder.com/economist/americas"  />
+<outline text="Economist / Asia" title="Economist / Asia" type="rss" xmlUrl="https://plink.anyfeeder.com/economist/asia"  />
+<outline text="Economist / China" title="Economist / China" type="rss" xmlUrl="https://plink.anyfeeder.com/economist/china-politics"  />
+<outline text="Economist / Middle East &amp; Africa" title="Economist / Middle East &amp; Africa" type="rss" xmlUrl="https://plink.anyfeeder.com/economist/middle-east-africa"  />
+<outline text="Economist / Europe" title="Economist / Europe" type="rss" xmlUrl="https://plink.anyfeeder.com/economist/europe"  />
+<outline text="Economist / Britain" title="Economist / Britain" type="rss" xmlUrl="https://plink.anyfeeder.com/economist/britain"  />
+<outline text="Economist / International" title="Economist / International" type="rss" xmlUrl="https://plink.anyfeeder.com/economist/international"  />
+<outline text="Economist / Business" title="Economist / Business" type="rss" xmlUrl="https://plink.anyfeeder.com/economist/business-finance"  />
+<outline text="Economist / Finance &amp; economics" title="Economist / Finance &amp; economics" type="rss" xmlUrl="https://plink.anyfeeder.com/economist/economics"  />
+<outline text="Economist / Science &amp; technology" title="Economist / Science &amp; technology" type="rss" xmlUrl="https://plink.anyfeeder.com/economist/science-technology"  />
+<outline text="Economist / Culture" title="Economist / Culture" type="rss" xmlUrl="https://plink.anyfeeder.com/economist/culture"  />
+<outline text="The New Yorker / News" title="The New Yorker / News" type="rss" xmlUrl="https://plink.anyfeeder.com/newyorker/news"  />
+<outline text="The New Yorker / Culture" title="The New Yorker / Culture" type="rss" xmlUrl="https://plink.anyfeeder.com/newyorker/culture"  />
+<outline text="The New Yorker / Humor" title="The New Yorker / Humor" type="rss" xmlUrl="https://plink.anyfeeder.com/newyorker/humor"  />
+<outline text="TIME" title="TIME" type="rss" xmlUrl="https://plink.anyfeeder.com/time"  />
+<outline text="Motherboard" title="Motherboard" type="rss" xmlUrl="https://plink.anyfeeder.com/vice/motherboard"  />
+<outline text="ZeroHedge" title="ZeroHedge" type="rss" xmlUrl="https://plink.anyfeeder.com/zerohedge"  />
+<outline text="Business Insider" title="Business Insider" type="rss" xmlUrl="https://plink.anyfeeder.com/businessinsider"  />
+<outline text="Gawker" title="Gawker" type="rss" xmlUrl="https://plink.anyfeeder.com/gawker"  />
+<outline text="The Atlantic" title="The Atlantic" type="rss" xmlUrl="https://plink.anyfeeder.com/theatlantic"  />
+<outline text="Vice" title="Vice" type="rss" xmlUrl="https://plink.anyfeeder.com/vice"  />
+<outline text="WIRED / Top Stories" title="WIRED / Top Stories" type="rss" xmlUrl="https://plink.anyfeeder.com/wired/top-stories"  />
+<outline text="WIRED / Business" title="WIRED / Business" type="rss" xmlUrl="https://plink.anyfeeder.com/wired/business"  />
+<outline text="WIRED / Artificial Intelligence" title="WIRED / Artificial Intelligence" type="rss" xmlUrl="https://plink.anyfeeder.com/wired/ai"  />
+<outline text="WIRED / Culture" title="WIRED / Culture" type="rss" xmlUrl="https://plink.anyfeeder.com/wired/culture"  />
+<outline text="WIRED / Tech" title="WIRED / Tech" type="rss" xmlUrl="https://plink.anyfeeder.com/wired/gear"  />
+<outline text="WIRED / Ideas" title="WIRED / Ideas" type="rss" xmlUrl="https://plink.anyfeeder.com/wired/ideas"  />
+<outline text="WIRED / Science" title="WIRED / Science" type="rss" xmlUrl="https://plink.anyfeeder.com/wired/science"  />
+<outline text="WIRED / Security" title="WIRED / Security" type="rss" xmlUrl="https://plink.anyfeeder.com/wired/security"  />
+<outline text="WIRED / Backchannel" title="WIRED / Backchannel" type="rss" xmlUrl="https://plink.anyfeeder.com/wired/backchannel"  />
+</outline>
+<outline text="Programming" title="Programming">
+<outline text="CSS-Tricks" title="CSS-Tricks" type="rss" xmlUrl="https://css-tricks.com/feed/"  />
+<outline text="web.dev" title="web.dev" type="rss" xmlUrl="https://web.dev/feed.xml"  />
+</outline>
+<outline text="Technology" title="Technology">
+<outline text="The Verge" title="The Verge" type="rss" xmlUrl="https://plink.anyfeeder.com/verge"  />
+<outline text="Ars Technica" title="Ars Technica" type="rss" xmlUrl="https://plink.anyfeeder.com/arstechnica"  />
+<outline text="ExtremeTech" title="ExtremeTech" type="rss" xmlUrl="https://plink.anyfeeder.com/extremetech"  />
+<outline text="TechCrunch" title="TechCrunch" type="rss" xmlUrl="https://plink.anyfeeder.com/techcrunch"  />
+<outline text="9to5Mac" title="9to5Mac" type="rss" xmlUrl="https://plink.anyfeeder.com/9to5mac"  />
+<outline text="Daring Fireball" title="Daring Fireball" type="rss" xmlUrl="https://daringfireball.net/feeds/main"  />
+<outline text="Six Colors" title="Six Colors" type="rss" xmlUrl="https://feedpress.me/sixcolors"  />
+</outline>
+<outline text="Other" title="Other">
+<outline text="Longreads" title="Longreads" type="rss" xmlUrl="https://plink.anyfeeder.com/longreads"  />
+</outline>
+</body></opml>

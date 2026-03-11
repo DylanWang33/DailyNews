@@ -4,7 +4,15 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-from config import ALLOWED_URL_SCHEMES, REQUEST_TIMEOUT, MAX_ARTICLE_LENGTH
+from config import ALLOWED_URL_SCHEMES, MAX_ARTICLE_LENGTH
+
+def _timeout():
+    try:
+        from config import get_config
+        t = get_config("request_timeout")
+        return int(t) if t is not None else 25
+    except Exception:
+        return 25
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"
@@ -24,7 +32,7 @@ def fetch_article(url):
         print("skip (invalid url):", url[:80])
         return None
     try:
-        r = requests.get(url, headers=HEADERS, timeout=REQUEST_TIMEOUT)
+        r = requests.get(url, headers=HEADERS, timeout=_timeout())
         if r.status_code != 200:
             print("skip:", url[:80], r.status_code)
             return None

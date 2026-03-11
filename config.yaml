@@ -1,6 +1,89 @@
 # DailyNews 配置（可选）
-# 指定 Obsidian 笔记库根目录后，新闻与简报会写到这里，便于在 Obsidian 中查看与双向链接
 obsidian_base: /Users/kryss/仓库/Dylan/DailyNews
+obsidian_vault_root: /Users/kryss/仓库/Dylan
 
-# 每轮最多保存多少篇新闻，达到后自动结束（避免一次跑太久）
 max_articles_per_run: 30
+fetch_delay_min: 0.2
+fetch_delay_max: 0.5
+request_timeout: 30
+
+keywords:
+  - 油价
+  # - 通胀
+  # - oil
+  # - OPEC
+
+# 今日热点：按分类，结构为 今日热点/日期/分类标题/具体网站.md；每源最多 max_hot_items 条
+max_hot_items: 15
+hot_categories:
+  新闻:
+    - name: 求是网
+      url: https://plink.anyfeeder.com/qstheory
+    - name: iDaily 每日环球视野
+      url: https://plink.anyfeeder.com/idaily/today
+    - name: 网易新闻今日关注
+      url: https://plink.anyfeeder.com/netease/today
+    - name: 新华网
+      url: https://plink.anyfeeder.com/newscn/whxw
+    - name: 联合早报
+      url: https://plink.anyfeeder.com/zaobao/realtime/china
+    - name: 澎湃新闻
+      url: https://plink.anyfeeder.com/thepaper
+    - name: 南方周末
+      url: https://plink.anyfeeder.com/infzm/news
+  科技:
+    - name: 36氪
+      url: https://plink.anyfeeder.com/36kr
+    - name: 虎嗅
+      url: https://plink.anyfeeder.com/huxiu
+    - name: IT之家
+      url: https://plink.anyfeeder.com/ithome/it
+    - name: Solidot
+      url: https://www.solidot.org/index.rss
+    - name: 少数派
+      url: https://plink.anyfeeder.com/sspai
+  知识:
+    - name: 知乎日报
+      url: https://plink.anyfeeder.com/zhihu/daily
+    - name: 知乎每日精选
+      url: http://www.zhihu.com/rss
+    - name: 知乎热榜
+      url: https://plink.anyfeeder.com/zhihu/hotlist
+    - name: 人人都是产品经理
+      url: https://plink.anyfeeder.com/woshipm/popular
+    - name: 观止每日一文
+      url: https://plink.anyfeeder.com/meiriyiwen
+  娱乐:
+    - name: 豆瓣最受欢迎影评
+      url: https://plink.anyfeeder.com/douban/review/movie
+    - name: 豆瓣最受欢迎书评
+      url: https://plink.anyfeeder.com/douban/review/book
+  财经:
+    - name: 雪球今日话题
+      url: https://plink.anyfeeder.com/xueqiu/today
+    - name: 财富中文网
+      url: https://plink.anyfeeder.com/fortunechina
+    - name: 经济日报
+      url: https://plink.anyfeeder.com/jingjiribao
+    - name: 经济观察网
+      url: https://plink.anyfeeder.com/eeo
+    - name: 界面财经
+      url: https://plink.anyfeeder.com/jiemian/finance
+  生活:
+    - name: 微博热搜榜
+      url: https://plink.anyfeeder.com/weibo/search/hot
+    - name: 煎蛋
+      url: https://plink.anyfeeder.com/jiandan
+    - name: 理想生活实验室
+      url: https://plink.anyfeeder.com/toodaylab
+  外国媒体:
+    - name: 路透中文
+      url: https://plink.anyfeeder.com/reuters/cn
+    - name: 华尔街日报中文版
+      url: https://plink.anyfeeder.com/wsj/cn
+    - name: 纽约时报中文网
+      url: https://plink.anyfeeder.com/nytimes/cn
+    - name: BBC中文版
+      url: https://plink.anyfeeder.com/bbc/cn
+    - name: RFI法国国际广播电台
+      url: https://plink.anyfeeder.com/rfi/cn

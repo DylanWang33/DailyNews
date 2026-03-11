@@ -41,6 +41,8 @@ def write_news(BASE, title_original, summary, cn_text, original_text, entities, 
 
 {title_original}
 
+[在浏览器中打开原文]({link})
+
 ---
 
 source: {link}

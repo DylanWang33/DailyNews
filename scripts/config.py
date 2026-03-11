@@ -69,6 +69,15 @@ REQUEST_TIMEOUT = 25
 # 单篇文章最大正文长度（字符），防止内存滥用
 MAX_ARTICLE_LENGTH = 500_000
 
-# 反爬延迟范围（秒）
-FETCH_DELAY_MIN = 1
-FETCH_DELAY_MAX = 3
+
+def get_fetch_delay():
+    """反爬延迟（秒），从 config.yaml 的 fetch_delay_min / fetch_delay_max 读取，默认 0.2～0.5 以加快捕获。"""
+    cfg = _read_config()
+    lo = cfg.get("fetch_delay_min")
+    hi = cfg.get("fetch_delay_max")
+    if lo is not None and hi is not None:
+        try:
+            return float(lo), float(hi)
+        except (TypeError, ValueError):
+            pass
+    return 0.2, 0.5
