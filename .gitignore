@@ -40,3 +40,4 @@ temp/
 
 # System
 Thumbs.db
+state/*.lock
