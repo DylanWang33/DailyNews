@@ -1,10 +1,6 @@
 # RSS 源（由 rss/feeds-all.opml 生成，与 OPML 内容一致）
 # 中文分类下源带 lang: zh，抓取时优先。
 
-- name: "喷嚏图卦"
-  url: https://plink.anyfeeder.com/pentitugua
-  lang: zh
-
 - name: "iDaily 每日环球视野"
   url: https://plink.anyfeeder.com/idaily/today
   lang: zh
@@ -397,18 +393,6 @@
   url: https://plink.anyfeeder.com/nytimes/dual
   lang: zh
 
-- name: "caoz的梦呓"
-  url: https://plink.anyfeeder.com/weixin/caozsay
-  lang: zh
-
-- name: "keso怎么看"
-  url: https://plink.anyfeeder.com/weixin/kesoview
-  lang: zh
-
-- name: "读库小报"
-  url: https://plink.anyfeeder.com/weixin/dukuxiaobao
-  lang: zh
-
 - name: "南方周末"
   url: https://plink.anyfeeder.com/weixin/nanfangzhoumo
   lang: zh
@@ -655,18 +639,6 @@
 
 - name: "罗辑思维"
   url: https://plink.anyfeeder.com/weixin/luojisw
-  lang: zh
-
-- name: "Knowyourself"
-  url: https://plink.anyfeeder.com/weixin/knowyourself2015
-  lang: zh
-
-- name: "读小库"
-  url: https://plink.anyfeeder.com/weixin/duxiaoku666
-  lang: zh
-
-- name: "槽边往事"
-  url: https://plink.anyfeeder.com/weixin/bitsea
   lang: zh
 
 - name: "脑洞故事板"

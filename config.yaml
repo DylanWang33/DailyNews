@@ -7,6 +7,7 @@ keywords:
   - 油价
   - 美国;伊朗
   - 战争
+  - 黄金
 
 # 契合度阈值（仅在 AI 不可用时的传统回退模式生效）
 relevance_threshold: 0.7
