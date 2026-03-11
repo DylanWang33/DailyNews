@@ -1,4 +1,7 @@
 # pip install -r requirements.txt 恢复必要环境命令
 feedparser
 newspaper3k
+sumy
 spacy
+pyyaml
+lxml
