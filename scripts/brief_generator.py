@@ -1,29 +1,28 @@
 # Daily Brief 自动生成
 
-import glob
+from pathlib import Path
 import datetime
 
-def generate_brief(base):
+
+def generate_brief(base_path, articles):
 
     today = datetime.date.today().isoformat()
 
-    files = glob.glob(f"{base}/news/**/*.md", recursive=True)
+    base = Path(base_path)
+    briefs_dir = base / "briefs"
 
-    lines=[]
+    # 自动创建目录
+    briefs_dir.mkdir(parents=True, exist_ok=True)
 
-    for f in files:
+    brief_file = briefs_dir / f"{today}.md"
 
-        with open(f) as x:
+    with open(brief_file, "w", encoding="utf-8") as f:
 
-            txt=x.read()
+        f.write(f"# Daily Brief {today}\n\n")
 
-            if today in txt:
-                lines.append(txt.split("\n")[0])
+        for art in articles:
+            f.write(f"## {art['title']}\n\n")
+            f.write(f"{art['summary']}\n\n")
+            f.write(f"[Read more]({art['url']})\n\n")
 
-    brief = "# Daily Brief\n\n"
-
-    for l in lines:
-        brief+=f"- {l}\n"
-
-    with open(f"{base}/briefs/{today}.md","w") as f:
-        f.write(brief)
+    print("brief saved:", brief_file)

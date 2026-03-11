@@ -1,28 +1,43 @@
 # 抓全文。 需要安装 pip install newspaper3k
 
-from newspaper import Article, Config
+import requests
+from bs4 import BeautifulSoup
+
+
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"
+}
+
 
 def fetch_article(url):
 
-    config = Config()
-
-    config.browser_user_agent = "Mozilla/5.0"
-
     try:
 
-        article = Article(url, config=config)
+        r = requests.get(url, headers=HEADERS, timeout=20)
 
-        article.download()
-        article.parse()
+        if r.status_code != 200:
+            print("skip:", url)
+            return None
+
+        soup = BeautifulSoup(r.text, "html.parser")
+
+        title = soup.title.text if soup.title else "No title"
+
+        paragraphs = soup.find_all("p")
+
+        text = "\n".join([p.get_text() for p in paragraphs])
+
+        if len(text) < 200:
+            print("skip short:", url)
+            return None
 
         return {
-            "title": article.title,
-            "text": article.text,
-            "authors": article.authors
+            "title": title,
+            "text": text
         }
 
     except Exception as e:
 
-        print("skip:", url)
+        print("parse error:", url, e)
 
         return None
