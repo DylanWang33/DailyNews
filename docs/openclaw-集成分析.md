@@ -1,5 +1,9 @@
 # OpenClaw 接入分析与方案
 
+**安全与权限分析**：接入后的安全隐患、OpenClaw 对项目的支持方式与权限、以及已知漏洞（含 ClawJacked/CVE-2026-25253）的说明见 **[openclaw-安全与权限分析.md](openclaw-安全与权限分析.md)**。
+
+---
+
 ## OpenClaw 是什么
 
 - **开源 AI 助手框架**（TypeScript，MIT），可在本机/自建环境运行，不依赖单一云厂商。

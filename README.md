@@ -89,7 +89,7 @@ cd /Users/kryss/DailyNewsRepo
 | 摘要生成 | sumy LSA 抽取式 | LLM 生成式（可指定中文、突出重点） |
 | 标题翻译（可选） | argostranslate | LLM 批量翻译（需 `openclaw_translate: true`） |
 
-OpenClaw 支持多种后端：本地 Ollama（免费、隐私）、OpenAI、Claude 等。详见 [docs/openclaw-集成分析.md](docs/openclaw-集成分析.md)。
+OpenClaw 支持多种后端：本地 Ollama（免费、隐私）、OpenAI、Claude 等。详见 [docs/openclaw-集成分析.md](docs/openclaw-集成分析.md)。**安全与权限、已知漏洞（如 ClawJacked）**见 [docs/openclaw-安全与权限分析.md](docs/openclaw-安全与权限分析.md)。
 
 未配置 `openclaw_base_url` 时行为与之前完全一致（sumy 摘要、字符串匹配）。
 
