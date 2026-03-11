@@ -1,3 +1,0 @@
-# Poth
-
-entity type: unknown

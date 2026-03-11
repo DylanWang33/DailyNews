@@ -1,3 +1,0 @@
-# Instagram
-
-entity type: unknown

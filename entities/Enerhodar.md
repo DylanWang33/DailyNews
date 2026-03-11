@@ -1,3 +1,0 @@
-# Enerhodar
-
-entity type: unknown

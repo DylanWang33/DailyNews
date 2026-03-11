@@ -1,3 +1,0 @@
-# Creggan
-
-entity type: unknown

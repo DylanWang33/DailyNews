@@ -1,3 +1,0 @@
-# Johnson
-
-entity type: unknown

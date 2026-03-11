@@ -1,3 +1,0 @@
-# Thaer
-
-entity type: unknown

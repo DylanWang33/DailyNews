@@ -1,3 +1,0 @@
-# Putin
-
-entity type: unknown

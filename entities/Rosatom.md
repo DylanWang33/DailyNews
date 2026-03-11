@@ -1,3 +1,0 @@
-# Rosatom
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# GB
-
-entity type: unknown

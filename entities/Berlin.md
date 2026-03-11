@@ -1,3 +1,0 @@
-# Berlin
-
-entity type: unknown

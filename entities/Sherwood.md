@@ -1,3 +1,0 @@
-# Sherwood
-
-entity type: unknown

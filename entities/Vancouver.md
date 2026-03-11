@@ -1,3 +1,0 @@
-# Vancouver
-
-entity type: unknown

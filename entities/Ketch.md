@@ -1,3 +1,0 @@
-# Ketch
-
-entity type: unknown

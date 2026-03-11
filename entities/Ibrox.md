@@ -1,3 +1,0 @@
-# Ibrox
-
-entity type: unknown

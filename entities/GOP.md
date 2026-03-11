@@ -1,3 +1,0 @@
-# GOP
-
-entity type: unknown

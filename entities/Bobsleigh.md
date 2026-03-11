@@ -1,3 +1,0 @@
-# Bobsleigh
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Galatasaray
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Blair
-
-entity type: unknown

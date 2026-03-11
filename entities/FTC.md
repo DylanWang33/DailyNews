@@ -1,3 +1,0 @@
-# FTC
-
-entity type: unknown

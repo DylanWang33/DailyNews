@@ -1,3 +1,0 @@
-# Rose
-
-entity type: unknown

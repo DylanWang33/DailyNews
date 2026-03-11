@@ -1,3 +1,0 @@
-# Bournemouth
-
-entity type: unknown

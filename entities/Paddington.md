@@ -1,3 +1,0 @@
-# Paddington
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Bank
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Smartmatic
-
-entity type: unknown

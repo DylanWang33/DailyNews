@@ -1,3 +1,0 @@
-# Acelas
-
-entity type: unknown

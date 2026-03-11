@@ -1,3 +1,0 @@
-# Roberts
-
-entity type: unknown

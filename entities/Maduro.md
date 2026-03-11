@@ -1,3 +1,0 @@
-# Maduro
-
-entity type: unknown

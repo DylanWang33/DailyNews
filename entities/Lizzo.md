@@ -1,3 +1,0 @@
-# Lizzo
-
-entity type: unknown

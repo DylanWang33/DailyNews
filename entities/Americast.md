@@ -1,3 +1,0 @@
-# Americast
-
-entity type: unknown

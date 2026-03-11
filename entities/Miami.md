@@ -1,3 +1,0 @@
-# Miami
-
-entity type: unknown

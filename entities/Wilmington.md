@@ -1,3 +1,0 @@
-# Wilmington
-
-entity type: unknown

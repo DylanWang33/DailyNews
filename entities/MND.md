@@ -1,3 +1,0 @@
-# MND
-
-entity type: unknown

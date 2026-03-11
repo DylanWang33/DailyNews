@@ -1,3 +1,0 @@
-# Vantuono
-
-entity type: unknown

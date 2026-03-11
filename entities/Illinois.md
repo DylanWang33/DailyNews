@@ -1,3 +1,0 @@
-# Illinois
-
-entity type: unknown

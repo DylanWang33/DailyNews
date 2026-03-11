@@ -1,3 +1,0 @@
-# iPad
-
-entity type: unknown

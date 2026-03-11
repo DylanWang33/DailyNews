@@ -1,3 +1,0 @@
-# Army
-
-entity type: unknown

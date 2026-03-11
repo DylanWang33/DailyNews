@@ -1,3 +1,0 @@
-# Tracy
-
-entity type: unknown

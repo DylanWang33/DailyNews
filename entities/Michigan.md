@@ -1,3 +1,0 @@
-# Michigan
-
-entity type: unknown

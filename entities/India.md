@@ -1,3 +1,0 @@
-# India
-
-entity type: unknown

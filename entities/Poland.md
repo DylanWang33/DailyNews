@@ -1,3 +1,0 @@
-# Poland
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Hamlin
-
-entity type: unknown

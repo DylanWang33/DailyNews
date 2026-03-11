@@ -1,3 +1,0 @@
-# Lazio
-
-entity type: unknown

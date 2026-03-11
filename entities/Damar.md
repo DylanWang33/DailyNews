@@ -1,3 +1,0 @@
-# Damar
-
-entity type: unknown

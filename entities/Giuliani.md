@@ -1,3 +1,0 @@
-# Giuliani
-
-entity type: unknown

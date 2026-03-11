@@ -1,3 +1,0 @@
-# Washington
-
-entity type: unknown

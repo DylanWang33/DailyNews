@@ -1,3 +1,0 @@
-# Maine
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Nevada
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Seventeen
-
-entity type: unknown

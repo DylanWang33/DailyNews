@@ -1,3 +1,0 @@
-# Lee
-
-entity type: unknown

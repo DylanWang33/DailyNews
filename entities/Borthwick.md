@@ -1,3 +1,0 @@
-# Borthwick
-
-entity type: unknown

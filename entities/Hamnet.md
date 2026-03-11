@@ -1,3 +1,0 @@
-# Hamnet
-
-entity type: unknown

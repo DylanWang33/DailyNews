@@ -1,3 +1,0 @@
-# Marianna
-
-entity type: unknown

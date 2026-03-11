@@ -1,3 +1,0 @@
-# Amsterdam
-
-entity type: unknown

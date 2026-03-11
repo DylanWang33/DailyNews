@@ -1,3 +1,0 @@
-# Ford
-
-entity type: unknown

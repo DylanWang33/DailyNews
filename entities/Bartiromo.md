@@ -1,3 +1,0 @@
-# Bartiromo
-
-entity type: unknown

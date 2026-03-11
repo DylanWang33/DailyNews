@@ -1,3 +1,0 @@
-# GMT
-
-entity type: unknown

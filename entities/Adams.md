@@ -1,3 +1,0 @@
-# Adams
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Pyeongchang
-
-entity type: unknown

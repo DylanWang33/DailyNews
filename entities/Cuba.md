@@ -1,3 +1,0 @@
-# Cuba
-
-entity type: unknown

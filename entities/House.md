@@ -1,3 +1,0 @@
-# House
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Iran
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Android
-
-entity type: unknown

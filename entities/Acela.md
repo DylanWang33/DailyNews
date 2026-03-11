@@ -1,3 +1,0 @@
-# Acela
-
-entity type: unknown

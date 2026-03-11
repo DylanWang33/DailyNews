@@ -1,3 +1,0 @@
-# Westminster
-
-entity type: unknown

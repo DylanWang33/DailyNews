@@ -1,3 +1,0 @@
-# Lancashire
-
-entity type: unknown

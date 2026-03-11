@@ -1,3 +1,0 @@
-# Beijing
-
-entity type: unknown

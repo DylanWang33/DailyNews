@@ -1,3 +1,0 @@
-# Sochi
-
-entity type: unknown

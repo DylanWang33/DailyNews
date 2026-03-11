@@ -1,3 +1,0 @@
-# UL
-
-entity type: unknown

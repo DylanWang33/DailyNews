@@ -1,3 +1,0 @@
-# Kidderminster
-
-entity type: unknown

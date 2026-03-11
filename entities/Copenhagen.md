@@ -1,3 +1,0 @@
-# Copenhagen
-
-entity type: unknown

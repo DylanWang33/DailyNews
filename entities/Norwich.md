@@ -1,3 +1,0 @@
-# Norwich
-
-entity type: unknown

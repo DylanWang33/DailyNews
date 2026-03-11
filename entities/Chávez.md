@@ -1,3 +1,0 @@
-# Chávez
-
-entity type: unknown

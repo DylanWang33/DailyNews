@@ -1,3 +1,0 @@
-# Labour
-
-entity type: unknown

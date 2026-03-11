@@ -1,3 +1,0 @@
-# IDF
-
-entity type: unknown

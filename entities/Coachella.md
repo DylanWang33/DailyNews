@@ -1,3 +1,0 @@
-# Coachella
-
-entity type: unknown

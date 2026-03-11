@@ -1,3 +1,0 @@
-# Anfield
-
-entity type: unknown

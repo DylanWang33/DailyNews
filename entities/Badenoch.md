@@ -1,3 +1,0 @@
-# Badenoch
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# NATO
-
-entity type: unknown

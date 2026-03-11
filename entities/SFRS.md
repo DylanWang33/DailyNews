@@ -1,3 +1,0 @@
-# SFRS
-
-entity type: unknown

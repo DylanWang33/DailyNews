@@ -1,3 +1,0 @@
-# Kharkiv
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Williams
-
-entity type: unknown

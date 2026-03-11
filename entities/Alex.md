@@ -1,3 +1,0 @@
-# Alex
-
-entity type: unknown

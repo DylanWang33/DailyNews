@@ -1,3 +1,0 @@
-# FOX
-
-entity type: unknown

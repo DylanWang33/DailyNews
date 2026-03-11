@@ -1,3 +1,0 @@
-# ProPublica
-
-entity type: unknown

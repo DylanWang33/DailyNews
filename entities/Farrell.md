@@ -1,3 +1,0 @@
-# Farrell
-
-entity type: unknown

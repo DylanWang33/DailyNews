@@ -1,3 +1,0 @@
-# Beth
-
-entity type: unknown

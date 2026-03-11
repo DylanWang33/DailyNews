@@ -1,3 +1,0 @@
-# Thomson
-
-entity type: unknown

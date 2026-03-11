@@ -1,3 +1,0 @@
-# Camenga
-
-entity type: unknown

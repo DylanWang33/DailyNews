@@ -1,3 +1,0 @@
-# Feinstein
-
-entity type: unknown

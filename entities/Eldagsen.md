@@ -1,3 +1,0 @@
-# Eldagsen
-
-entity type: unknown

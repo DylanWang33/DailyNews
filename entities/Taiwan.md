@@ -1,3 +1,0 @@
-# Taiwan
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Florida
-
-entity type: unknown

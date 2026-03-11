@@ -1,3 +1,0 @@
-# Venezuela
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Bedoya
-
-entity type: unknown

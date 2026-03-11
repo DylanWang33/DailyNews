@@ -1,3 +1,0 @@
-# RBC
-
-entity type: unknown

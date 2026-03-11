@@ -1,3 +1,0 @@
-# Troon
-
-entity type: unknown

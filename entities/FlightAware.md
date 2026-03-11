@@ -1,3 +1,0 @@
-# FlightAware
-
-entity type: unknown

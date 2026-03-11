@@ -1,3 +1,0 @@
-# Ferkile
-
-entity type: unknown

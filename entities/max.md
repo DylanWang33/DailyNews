@@ -1,3 +1,0 @@
-# max
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Jeffrey
-
-entity type: unknown

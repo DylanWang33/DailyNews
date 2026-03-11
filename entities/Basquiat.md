@@ -1,3 +1,0 @@
-# Basquiat
-
-entity type: unknown

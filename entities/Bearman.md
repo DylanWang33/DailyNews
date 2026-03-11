@@ -1,3 +1,0 @@
-# Bearman
-
-entity type: unknown

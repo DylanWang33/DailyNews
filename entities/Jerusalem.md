@@ -1,3 +1,0 @@
-# Jerusalem
-
-entity type: unknown

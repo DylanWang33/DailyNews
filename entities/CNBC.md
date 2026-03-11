@@ -1,3 +1,0 @@
-# CNBC
-
-entity type: unknown

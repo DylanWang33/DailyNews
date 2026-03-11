@@ -1,3 +1,0 @@
-# Qaryut
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# NICE
-
-entity type: unknown

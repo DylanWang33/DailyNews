@@ -1,3 +1,0 @@
-# Renaissance
-
-entity type: unknown

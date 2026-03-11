@@ -1,3 +1,0 @@
-# McDermott
-
-entity type: unknown

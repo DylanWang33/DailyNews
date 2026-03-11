@@ -1,3 +1,0 @@
-# Simmons
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# BBC
-
-entity type: unknown

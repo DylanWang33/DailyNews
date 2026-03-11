@@ -1,3 +1,0 @@
-# Blackpink
-
-entity type: unknown

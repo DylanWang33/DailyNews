@@ -1,3 +1,0 @@
-# Wagner
-
-entity type: unknown

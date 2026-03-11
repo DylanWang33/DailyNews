@@ -1,3 +1,0 @@
-# California
-
-entity type: unknown

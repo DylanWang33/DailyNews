@@ -1,3 +1,0 @@
-# Atlanta
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Puffer
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# EUA
-
-entity type: unknown

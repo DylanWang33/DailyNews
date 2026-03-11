@@ -1,3 +1,0 @@
-# Lindell
-
-entity type: unknown

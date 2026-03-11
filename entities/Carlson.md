@@ -1,3 +1,0 @@
-# Carlson
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Pope
-
-entity type: unknown

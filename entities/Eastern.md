@@ -1,3 +1,0 @@
-# Eastern
-
-entity type: unknown

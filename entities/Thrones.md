@@ -1,3 +1,0 @@
-# Thrones
-
-entity type: unknown

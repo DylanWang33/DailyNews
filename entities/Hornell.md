@@ -1,3 +1,0 @@
-# Hornell
-
-entity type: unknown

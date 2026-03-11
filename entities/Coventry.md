@@ -1,3 +1,0 @@
-# Coventry
-
-entity type: unknown

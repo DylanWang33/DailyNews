@@ -1,3 +1,0 @@
-# Jeanine
-
-entity type: unknown

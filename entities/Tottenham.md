@@ -1,3 +1,0 @@
-# Tottenham
-
-entity type: unknown

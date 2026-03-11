@@ -1,3 +1,0 @@
-# Innsbruck
-
-entity type: unknown

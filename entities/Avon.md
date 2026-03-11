@@ -1,3 +1,0 @@
-# Avon
-
-entity type: unknown

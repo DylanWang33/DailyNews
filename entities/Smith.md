@@ -1,3 +1,0 @@
-# Smith
-
-entity type: unknown

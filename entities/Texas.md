@@ -1,3 +1,0 @@
-# Texas
-
-entity type: unknown

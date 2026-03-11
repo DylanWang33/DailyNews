@@ -1,3 +1,0 @@
-# Benadryl
-
-entity type: unknown

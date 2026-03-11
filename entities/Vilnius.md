@@ -1,3 +1,0 @@
-# Vilnius
-
-entity type: unknown

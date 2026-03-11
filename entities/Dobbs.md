@@ -1,3 +1,0 @@
-# Dobbs
-
-entity type: unknown

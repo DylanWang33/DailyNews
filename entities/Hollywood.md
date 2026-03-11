@@ -1,3 +1,0 @@
-# Hollywood
-
-entity type: unknown

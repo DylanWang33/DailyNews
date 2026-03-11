@@ -1,3 +1,0 @@
-# Foxx
-
-entity type: unknown

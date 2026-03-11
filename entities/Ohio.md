@@ -1,3 +1,0 @@
-# Ohio
-
-entity type: unknown

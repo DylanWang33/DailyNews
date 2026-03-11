@@ -1,3 +1,0 @@
-# Wheelchair
-
-entity type: unknown

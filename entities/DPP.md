@@ -1,3 +1,0 @@
-# DPP
-
-entity type: unknown

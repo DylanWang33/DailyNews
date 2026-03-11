@@ -1,3 +1,0 @@
-# Austria
-
-entity type: unknown

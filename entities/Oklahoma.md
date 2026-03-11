@@ -1,3 +1,0 @@
-# Oklahoma
-
-entity type: unknown

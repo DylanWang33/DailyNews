@@ -1,3 +1,0 @@
-# Honig
-
-entity type: unknown

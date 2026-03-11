@@ -1,3 +1,0 @@
-# Portland
-
-entity type: unknown

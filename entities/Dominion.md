@@ -1,3 +1,0 @@
-# Dominion
-
-entity type: unknown

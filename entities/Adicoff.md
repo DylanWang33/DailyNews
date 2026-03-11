@@ -1,3 +1,0 @@
-# Adicoff
-
-entity type: unknown

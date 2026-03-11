@@ -1,3 +1,0 @@
-# Caracas
-
-entity type: unknown

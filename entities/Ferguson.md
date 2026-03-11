@@ -1,3 +1,0 @@
-# Ferguson
-
-entity type: unknown

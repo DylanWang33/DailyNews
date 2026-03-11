@@ -1,3 +1,0 @@
-# Ralph
-
-entity type: unknown

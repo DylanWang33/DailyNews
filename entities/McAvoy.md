@@ -1,3 +1,0 @@
-# McAvoy
-
-entity type: unknown

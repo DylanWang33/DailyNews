@@ -1,3 +1,0 @@
-# Tatarsky
-
-entity type: unknown

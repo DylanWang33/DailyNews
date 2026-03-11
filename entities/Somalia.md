@@ -1,3 +1,0 @@
-# Somalia
-
-entity type: unknown

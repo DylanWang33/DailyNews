@@ -1,3 +1,0 @@
-# Oklahoman
-
-entity type: unknown

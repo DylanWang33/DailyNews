@@ -1,3 +1,0 @@
-# DOE
-
-entity type: unknown

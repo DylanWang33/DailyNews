@@ -1,3 +1,0 @@
-# Oman
-
-entity type: unknown

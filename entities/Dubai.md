@@ -1,3 +1,0 @@
-# Dubai
-
-entity type: unknown

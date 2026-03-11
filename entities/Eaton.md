@@ -1,3 +1,0 @@
-# Eaton
-
-entity type: unknown

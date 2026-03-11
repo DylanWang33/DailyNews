@@ -1,3 +1,0 @@
-# Mason
-
-entity type: unknown

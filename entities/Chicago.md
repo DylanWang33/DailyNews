@@ -1,3 +1,0 @@
-# Chicago
-
-entity type: unknown

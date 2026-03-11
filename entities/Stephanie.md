@@ -1,3 +1,0 @@
-# Stephanie
-
-entity type: unknown

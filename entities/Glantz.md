@@ -1,3 +1,0 @@
-# Glantz
-
-entity type: unknown

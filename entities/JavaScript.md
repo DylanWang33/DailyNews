@@ -1,3 +1,0 @@
-# JavaScript
-
-entity type: unknown

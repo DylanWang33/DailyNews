@@ -1,3 +1,0 @@
-# Kazmaier
-
-entity type: unknown

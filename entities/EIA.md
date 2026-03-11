@@ -1,3 +1,0 @@
-# EIA
-
-entity type: unknown

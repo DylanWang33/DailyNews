@@ -1,3 +1,0 @@
-# Crimea
-
-entity type: unknown

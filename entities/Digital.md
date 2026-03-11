@@ -1,3 +1,0 @@
-# Digital
-
-entity type: unknown

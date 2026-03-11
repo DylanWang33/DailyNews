@@ -1,3 +1,0 @@
-# Argyle
-
-entity type: unknown

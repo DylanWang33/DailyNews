@@ -1,3 +1,0 @@
-# Hardangervidda
-
-entity type: unknown

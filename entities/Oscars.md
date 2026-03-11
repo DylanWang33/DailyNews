@@ -1,3 +1,0 @@
-# Oscars
-
-entity type: unknown

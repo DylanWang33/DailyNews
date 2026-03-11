@@ -1,3 +1,0 @@
-# Redknapp
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Henwick
-
-entity type: unknown

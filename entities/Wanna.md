@@ -1,3 +1,0 @@
-# Wanna
-
-entity type: unknown

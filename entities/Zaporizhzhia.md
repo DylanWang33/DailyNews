@@ -1,3 +1,0 @@
-# Zaporizhzhia
-
-entity type: unknown

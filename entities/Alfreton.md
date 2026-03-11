@@ -1,3 +1,0 @@
-# Alfreton
-
-entity type: unknown

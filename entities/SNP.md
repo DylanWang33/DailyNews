@@ -1,3 +1,0 @@
-# SNP
-
-entity type: unknown

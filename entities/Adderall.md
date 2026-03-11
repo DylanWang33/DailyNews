@@ -1,3 +1,0 @@
-# Adderall
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Khizhnyak
-
-entity type: unknown

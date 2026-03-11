@@ -1,3 +1,0 @@
-# Wallace
-
-entity type: unknown

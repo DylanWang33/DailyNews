@@ -1,3 +1,0 @@
-# Arizona
-
-entity type: unknown

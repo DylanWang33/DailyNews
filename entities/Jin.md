@@ -1,3 +1,0 @@
-# Jin
-
-entity type: unknown

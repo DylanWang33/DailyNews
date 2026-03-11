@@ -1,3 +1,0 @@
-# Airbnb
-
-entity type: unknown

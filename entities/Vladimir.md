@@ -1,3 +1,0 @@
-# Vladimir
-
-entity type: unknown

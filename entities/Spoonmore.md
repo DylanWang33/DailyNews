@@ -1,3 +1,0 @@
-# Spoonmore
-
-entity type: unknown

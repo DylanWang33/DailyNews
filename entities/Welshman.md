@@ -1,3 +1,0 @@
-# Welshman
-
-entity type: unknown

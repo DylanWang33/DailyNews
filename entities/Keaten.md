@@ -1,3 +1,0 @@
-# Keaten
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Lester
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Strasbourg
-
-entity type: unknown

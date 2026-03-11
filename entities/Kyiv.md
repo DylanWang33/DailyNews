@@ -1,3 +1,0 @@
-# Kyiv
-
-entity type: unknown

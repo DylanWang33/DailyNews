@@ -1,3 +1,0 @@
-# NHS
-
-entity type: unknown

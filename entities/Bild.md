@@ -1,3 +1,0 @@
-# Bild
-
-entity type: unknown

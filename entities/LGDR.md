@@ -1,3 +1,0 @@
-# LGDR
-
-entity type: unknown

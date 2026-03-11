@@ -1,3 +1,0 @@
-# Graham
-
-entity type: unknown

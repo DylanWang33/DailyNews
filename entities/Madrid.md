@@ -1,3 +1,0 @@
-# Madrid
-
-entity type: unknown

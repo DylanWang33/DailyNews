@@ -1,3 +1,0 @@
-# People
-
-entity type: unknown

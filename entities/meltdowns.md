@@ -1,3 +1,0 @@
-# meltdowns
-
-entity type: unknown

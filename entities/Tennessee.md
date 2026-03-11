@@ -1,3 +1,0 @@
-# Tennessee
-
-entity type: unknown

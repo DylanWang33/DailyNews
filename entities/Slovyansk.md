@@ -1,3 +1,0 @@
-# Slovyansk
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Minnesota
-
-entity type: unknown

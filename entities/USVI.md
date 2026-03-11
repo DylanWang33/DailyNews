@@ -1,3 +1,0 @@
-# USVI
-
-entity type: unknown

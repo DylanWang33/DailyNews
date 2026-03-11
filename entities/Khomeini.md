@@ -1,3 +1,0 @@
-# Khomeini
-
-entity type: unknown

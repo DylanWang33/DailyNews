@@ -1,3 +1,0 @@
-# Geradts
-
-entity type: unknown

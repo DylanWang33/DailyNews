@@ -1,3 +1,0 @@
-# Stoltenberg
-
-entity type: unknown

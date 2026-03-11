@@ -1,3 +1,0 @@
-# Ikea
-
-entity type: unknown

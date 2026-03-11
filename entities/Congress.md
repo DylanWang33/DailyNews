@@ -1,3 +1,0 @@
-# Congress
-
-entity type: unknown

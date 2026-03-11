@@ -1,3 +1,0 @@
-# Willingham
-
-entity type: unknown

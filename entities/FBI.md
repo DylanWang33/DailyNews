@@ -1,3 +1,0 @@
-# FBI
-
-entity type: unknown

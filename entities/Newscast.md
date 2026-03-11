@@ -1,3 +1,0 @@
-# Newscast
-
-entity type: unknown

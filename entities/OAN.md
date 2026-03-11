@@ -1,3 +1,0 @@
-# OAN
-
-entity type: unknown

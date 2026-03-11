@@ -1,3 +1,0 @@
-# Donbas
-
-entity type: unknown

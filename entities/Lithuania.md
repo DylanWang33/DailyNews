@@ -1,3 +1,0 @@
-# Lithuania
-
-entity type: unknown

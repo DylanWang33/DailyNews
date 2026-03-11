@@ -1,3 +1,0 @@
-# CNN
-
-entity type: unknown

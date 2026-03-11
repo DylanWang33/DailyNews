@@ -1,3 +1,0 @@
-# FDA
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Cardin
-
-entity type: unknown

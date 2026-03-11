@@ -1,3 +1,0 @@
-# Lady
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Wigan
-
-entity type: unknown

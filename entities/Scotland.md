@@ -1,3 +1,0 @@
-# Scotland
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Indonesia
-
-entity type: unknown

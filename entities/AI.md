@@ -1,3 +1,0 @@
-# AI
-
-entity type: unknown

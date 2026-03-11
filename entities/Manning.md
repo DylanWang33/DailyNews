@@ -1,3 +1,0 @@
-# Manning
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Durbin
-
-entity type: unknown

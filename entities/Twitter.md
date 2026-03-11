@@ -1,3 +1,0 @@
-# Twitter
-
-entity type: unknown

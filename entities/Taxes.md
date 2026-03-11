@@ -1,3 +1,0 @@
-# Taxes
-
-entity type: unknown

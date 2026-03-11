@@ -1,3 +1,0 @@
-# Savichev
-
-entity type: unknown

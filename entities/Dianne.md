@@ -1,3 +1,0 @@
-# Dianne
-
-entity type: unknown

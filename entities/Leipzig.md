@@ -1,3 +1,0 @@
-# Leipzig
-
-entity type: unknown

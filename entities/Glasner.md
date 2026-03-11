@@ -1,3 +1,0 @@
-# Glasner
-
-entity type: unknown

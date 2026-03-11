@@ -1,3 +1,0 @@
-# Belarus
-
-entity type: unknown

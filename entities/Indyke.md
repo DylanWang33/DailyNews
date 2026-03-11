@@ -1,3 +1,0 @@
-# Indyke
-
-entity type: unknown

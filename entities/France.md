@@ -1,3 +1,0 @@
-# France
-
-entity type: unknown

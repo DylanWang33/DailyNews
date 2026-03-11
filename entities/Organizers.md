@@ -1,3 +1,0 @@
-# Organizers
-
-entity type: unknown

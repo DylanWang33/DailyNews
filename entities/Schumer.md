@@ -1,3 +1,0 @@
-# Schumer
-
-entity type: unknown

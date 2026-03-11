@@ -1,3 +1,0 @@
-# Jacob
-
-entity type: unknown

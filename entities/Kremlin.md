@@ -1,3 +1,0 @@
-# Kremlin
-
-entity type: unknown

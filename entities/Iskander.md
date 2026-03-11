@@ -1,3 +1,0 @@
-# Iskander
-
-entity type: unknown

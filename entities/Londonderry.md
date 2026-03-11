@@ -1,3 +1,0 @@
-# Londonderry
-
-entity type: unknown

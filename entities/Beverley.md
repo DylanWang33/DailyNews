@@ -1,3 +1,0 @@
-# Beverley
-
-entity type: unknown

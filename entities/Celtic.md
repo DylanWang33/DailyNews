@@ -1,3 +1,0 @@
-# Celtic
-
-entity type: unknown

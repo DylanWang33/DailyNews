@@ -1,3 +1,0 @@
-# Blumenthal
-
-entity type: unknown

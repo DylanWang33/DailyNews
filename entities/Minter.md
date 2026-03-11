@@ -1,3 +1,0 @@
-# Minter
-
-entity type: unknown

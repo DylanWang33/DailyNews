@@ -1,3 +1,0 @@
-# Cabalona
-
-entity type: unknown

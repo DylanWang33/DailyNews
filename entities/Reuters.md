@@ -1,3 +1,0 @@
-# Reuters
-
-entity type: unknown

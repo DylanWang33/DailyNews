@@ -1,3 +1,0 @@
-# Athletes
-
-entity type: unknown

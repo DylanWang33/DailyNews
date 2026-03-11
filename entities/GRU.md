@@ -1,3 +1,0 @@
-# GRU
-
-entity type: unknown

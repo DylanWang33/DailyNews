@@ -1,3 +1,0 @@
-# Newsmax
-
-entity type: unknown

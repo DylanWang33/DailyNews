@@ -1,3 +1,0 @@
-# Senate
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Frank
-
-entity type: unknown

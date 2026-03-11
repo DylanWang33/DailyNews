@@ -1,3 +1,0 @@
-# Milan
-
-entity type: unknown

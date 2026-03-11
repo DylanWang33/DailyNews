@@ -1,3 +1,0 @@
-# Krasnodar
-
-entity type: unknown

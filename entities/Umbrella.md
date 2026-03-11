@@ -1,3 +1,0 @@
-# Umbrella
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Afghanistan
-
-entity type: unknown

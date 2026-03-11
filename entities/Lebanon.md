@@ -1,3 +1,0 @@
-# Lebanon
-
-entity type: unknown

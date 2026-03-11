@@ -1,3 +1,0 @@
-# Schools
-
-entity type: unknown

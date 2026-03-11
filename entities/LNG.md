@@ -1,3 +1,0 @@
-# LNG
-
-entity type: unknown

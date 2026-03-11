@@ -1,3 +1,0 @@
-# UK
-
-entity type: unknown

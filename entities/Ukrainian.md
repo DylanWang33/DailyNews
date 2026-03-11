@@ -1,3 +1,0 @@
-# Ukrainian
-
-entity type: unknown

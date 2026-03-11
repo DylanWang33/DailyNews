@@ -1,3 +1,0 @@
-# Windward
-
-entity type: unknown

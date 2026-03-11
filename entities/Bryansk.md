@@ -1,3 +1,0 @@
-# Bryansk
-
-entity type: unknown

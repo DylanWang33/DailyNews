@@ -1,3 +1,0 @@
-# Durroux
-
-entity type: unknown

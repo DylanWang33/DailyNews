@@ -1,3 +1,0 @@
-# Jeanne
-
-entity type: unknown

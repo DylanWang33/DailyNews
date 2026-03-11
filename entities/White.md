@@ -1,3 +1,0 @@
-# White
-
-entity type: unknown

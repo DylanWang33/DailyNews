@@ -1,3 +1,0 @@
-# Yekaterinburg
-
-entity type: unknown

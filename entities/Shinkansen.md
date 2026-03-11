@@ -1,3 +1,0 @@
-# Shinkansen
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# McHenry
-
-entity type: unknown

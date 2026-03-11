@@ -1,3 +1,0 @@
-# Senedd
-
-entity type: unknown

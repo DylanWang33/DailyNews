@@ -1,3 +1,0 @@
-# Skye
-
-entity type: unknown

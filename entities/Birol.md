@@ -1,3 +1,0 @@
-# Birol
-
-entity type: unknown

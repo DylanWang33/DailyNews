@@ -1,3 +1,0 @@
-# Fyllingsdalstunnelen
-
-entity type: unknown

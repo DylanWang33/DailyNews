@@ -1,3 +1,0 @@
-# Donetsk
-
-entity type: unknown

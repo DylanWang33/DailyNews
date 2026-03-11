@@ -1,3 +1,0 @@
-# Clyde
-
-entity type: unknown

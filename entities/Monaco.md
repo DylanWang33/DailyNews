@@ -1,3 +1,0 @@
-# Monaco
-
-entity type: unknown

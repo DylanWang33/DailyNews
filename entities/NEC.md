@@ -1,3 +1,0 @@
-# NEC
-
-entity type: unknown

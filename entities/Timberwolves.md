@@ -1,3 +1,0 @@
-# Timberwolves
-
-entity type: unknown

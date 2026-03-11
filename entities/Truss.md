@@ -1,3 +1,0 @@
-# Truss
-
-entity type: unknown

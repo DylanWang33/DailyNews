@@ -1,3 +1,0 @@
-# Grinston
-
-entity type: unknown

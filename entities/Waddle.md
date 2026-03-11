@@ -1,3 +1,0 @@
-# Waddle
-
-entity type: unknown

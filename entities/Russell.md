@@ -1,3 +1,0 @@
-# Russell
-
-entity type: unknown

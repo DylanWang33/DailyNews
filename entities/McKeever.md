@@ -1,3 +1,0 @@
-# McKeever
-
-entity type: unknown

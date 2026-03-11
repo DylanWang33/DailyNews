@@ -1,3 +1,0 @@
-# Enhypen
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Tradeston
-
-entity type: unknown

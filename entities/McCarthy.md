@@ -1,3 +1,0 @@
-# McCarthy
-
-entity type: unknown

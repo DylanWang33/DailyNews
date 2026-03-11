@@ -1,3 +1,0 @@
-# Keir
-
-entity type: unknown

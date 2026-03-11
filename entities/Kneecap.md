@@ -1,3 +1,0 @@
-# Kneecap
-
-entity type: unknown

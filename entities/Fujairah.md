@@ -1,3 +1,0 @@
-# Fujairah
-
-entity type: unknown

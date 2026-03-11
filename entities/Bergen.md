@@ -1,3 +1,0 @@
-# Bergen
-
-entity type: unknown

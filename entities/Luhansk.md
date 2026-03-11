@@ -1,3 +1,0 @@
-# Luhansk
-
-entity type: unknown

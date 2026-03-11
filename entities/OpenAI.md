@@ -1,3 +1,0 @@
-# OpenAI
-
-entity type: unknown

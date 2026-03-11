@@ -1,3 +1,0 @@
-# Zelensky
-
-entity type: unknown

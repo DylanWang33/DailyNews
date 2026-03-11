@@ -1,3 +1,0 @@
-# Denmark
-
-entity type: unknown

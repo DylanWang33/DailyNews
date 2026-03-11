@@ -1,3 +1,0 @@
-# Rangers
-
-entity type: unknown

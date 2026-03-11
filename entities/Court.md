@@ -1,3 +1,0 @@
-# Court
-
-entity type: unknown

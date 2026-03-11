@@ -1,3 +1,0 @@
-# Gaza
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# MAGA
-
-entity type: unknown

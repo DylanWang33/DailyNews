@@ -1,3 +1,0 @@
-# Alabama
-
-entity type: unknown

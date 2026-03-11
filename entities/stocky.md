@@ -1,3 +1,0 @@
-# stocky
-
-entity type: unknown

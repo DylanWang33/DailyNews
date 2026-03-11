@@ -1,3 +1,0 @@
-# IPC
-
-entity type: unknown

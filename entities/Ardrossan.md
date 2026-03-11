@@ -1,3 +1,0 @@
-# Ardrossan
-
-entity type: unknown

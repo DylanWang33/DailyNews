@@ -1,3 +1,0 @@
-# Weiner
-
-entity type: unknown

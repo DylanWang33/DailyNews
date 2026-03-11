@@ -1,3 +1,0 @@
-# Whelan
-
-entity type: unknown

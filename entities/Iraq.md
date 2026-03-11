@@ -1,3 +1,0 @@
-# Iraq
-
-entity type: unknown

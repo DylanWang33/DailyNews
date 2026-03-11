@@ -1,3 +1,0 @@
-# Navy
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Prigozhin
-
-entity type: unknown

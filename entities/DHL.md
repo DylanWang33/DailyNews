@@ -1,3 +1,0 @@
-# DHL
-
-entity type: unknown

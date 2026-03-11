@@ -1,3 +1,0 @@
-# Glastonbury
-
-entity type: unknown

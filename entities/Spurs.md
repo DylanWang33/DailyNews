@@ -1,3 +1,0 @@
-# Spurs
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# RAC
-
-entity type: unknown

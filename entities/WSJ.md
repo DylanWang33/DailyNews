@@ -1,3 +1,0 @@
-# WSJ
-
-entity type: unknown

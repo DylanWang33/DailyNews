@@ -1,3 +1,0 @@
-# Kuwaiti
-
-entity type: unknown

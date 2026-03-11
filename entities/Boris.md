@@ -1,3 +1,0 @@
-# Boris
-
-entity type: unknown

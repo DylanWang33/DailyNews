@@ -1,3 +1,0 @@
-# Douglas
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Delaware
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Netflix
-
-entity type: unknown

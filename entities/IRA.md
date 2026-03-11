@@ -1,3 +1,0 @@
-# IRA
-
-entity type: unknown

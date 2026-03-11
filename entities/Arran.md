@@ -1,3 +1,0 @@
-# Arran
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Beane
-
-entity type: unknown

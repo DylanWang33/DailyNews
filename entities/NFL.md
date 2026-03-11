@@ -1,3 +1,0 @@
-# NFL
-
-entity type: unknown

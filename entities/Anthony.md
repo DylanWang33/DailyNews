@@ -1,3 +1,0 @@
-# Anthony
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Chelsea
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Winds
-
-entity type: unknown

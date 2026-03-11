@@ -1,3 +1,0 @@
-# Gyllenhaal
-
-entity type: unknown

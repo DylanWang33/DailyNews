@@ -1,3 +1,0 @@
-# Barbara
-
-entity type: unknown

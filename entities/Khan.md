@@ -1,3 +1,0 @@
-# Khan
-
-entity type: unknown

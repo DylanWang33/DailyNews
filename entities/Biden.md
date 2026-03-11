@@ -1,3 +1,0 @@
-# Biden
-
-entity type: unknown

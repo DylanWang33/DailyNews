@@ -1,3 +1,0 @@
-# Spencer
-
-entity type: unknown

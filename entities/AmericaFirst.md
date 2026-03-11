@@ -1,3 +1,0 @@
-# AmericaFirst
-
-entity type: unknown

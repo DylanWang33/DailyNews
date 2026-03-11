@@ -1,3 +1,0 @@
-# Pentagon
-
-entity type: unknown

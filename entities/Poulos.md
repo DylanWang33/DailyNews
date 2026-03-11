@@ -1,3 +1,0 @@
-# Poulos
-
-entity type: unknown

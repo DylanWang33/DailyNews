@@ -1,3 +1,0 @@
-# HRT
-
-entity type: unknown

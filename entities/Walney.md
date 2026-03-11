@@ -1,3 +1,0 @@
-# Walney
-
-entity type: unknown

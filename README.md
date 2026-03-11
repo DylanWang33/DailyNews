@@ -10,7 +10,8 @@ DailyNewsRepo/
 ├── scripts/          # 所有程序
 ├── rss/              # feeds-all.opml（唯一 RSS 源定义）
 ├── 每日新闻/          # 每日新闻/日期/分类/具体网站.md（仅标题+链接）
-├── 我的关注/          # 我的关注/日期/关键词.md（契合度≥阈值的条目）
+├── 我的关注/          # 我的关注/日期/关键词.md（单关键词契合度 或 多标签全匹配）
+├── entities/          # 实体按日期 entities/YYYY-MM-DD/，便于按日删除释放空间
 ├── obsidian-snippets/ # 可选：复制到库 .obsidian/snippets 优化阅读
 ├── logs/             # run.sh 输出日志
 └── run.sh            # 一键执行
@@ -27,15 +28,17 @@ fetch_news.py
         → 每日新闻/YYYY-MM-DD/分类/具体网站.md（英文标题可译成中文显示）
         ↓
 我的关注：从当日「每日新闻」中按 config 的 keywords 筛选
-        契合度 = 标题 + RSS 摘要 与关键词的匹配（中文关键词会译英再匹配外文）
-        契合度 ≥ relevance_threshold（默认 0.7）则归入该关键词
+        - 单个关键词：仅用标题 + RSS 摘要契合度 ≥ relevance_threshold 即归入
+        - 分号多标签（如 美国;伊朗）：必须**全部**标签都出现在该文的 entities/标题/摘要 中才归入；会抓取正文、提取实体、并用 sumy 做摘要
         → 我的关注/YYYY-MM-DD/关键词.md
+        ↓
+实体按日期写入 entities/YYYY-MM-DD/，需要释放空间时可直接删除某日文件夹
         ↓
 git push
 ```
 
-- **不抓取正文**：不再请求文章页面，不生成 News 文件夹、不翻译正文、不生成简报。
-- **契合度**：仅用 RSS 的标题和摘要（description/summary）计算，不访问原文；契合度标记不写入 Obsidian，仅用于筛选。
+- **分号 = AND**：`美国;伊朗` 表示「美国」与「伊朗」两个标签都要匹配（在实体、标题或摘要中），只含一个不会放入。
+- **实体按日**：实体笔记写在 `entities/YYYY-MM-DD/` 下，删除某日即释放该日实体，不影响其他日期。
 
 ## 执行方式
 
@@ -63,8 +66,8 @@ cd /Users/kryss/DailyNewsRepo
 ## 配置（config.yaml）
 
 - **obsidian_base**：每日新闻、我的关注写入的目录（一般为 Obsidian 库内子文件夹）。
-- **keywords**：关键词列表，如 `油价`、`美伊战争`；从每日新闻中筛选出契合度 ≥ 阈值的条目，写入「我的关注」对应日期的 `关键词.md`。
-- **relevance_threshold**：0～1，默认 `0.7`；标题+摘要与关键词的匹配度 ≥ 此值才归入我的关注。中文关键词会译成英文后再匹配英文标题/摘要。
+- **keywords**：关键词列表。单个词如 `油价` 用标题+摘要契合度筛选。**分号表示多标签 AND**，如 `美国;伊朗` 表示须同时包含美国、伊朗（在 entities/标题/摘要 中）才归入该组，此时会抓正文、提取实体并做摘要。
+- **relevance_threshold**：0～1，默认 `0.7`；仅对**单关键词**生效；多标签组不看此值，必须全标签命中。
 
 ## RSS 源
 
@@ -73,7 +76,12 @@ cd /Users/kryss/DailyNewsRepo
 ## 常见问题
 
 - **Permission denied**：对 `每日新闻`、`我的关注`、`logs` 等目录执行 `chown`/`chmod` 确保当前用户可写。
-- **我的关注为空**：检查 `keywords` 是否配置、`relevance_threshold` 是否过高；当前仅用标题和 RSS 摘要匹配，若摘要过短可适当调低阈值或增加关键词。
+- **我的关注为空**：单关键词时检查 `relevance_threshold`；多标签（如 `美国;伊朗`）时需正文中同时出现所有标签，且会抓取正文（可能较慢或部分站点失败）。
+
+## 摘要与 AI 总结
+
+- **我的关注**中多标签条目会抓取正文并用 **sumy**（LSA 抽取式摘要）生成简短总结，无需 API、本地免费。
+- 若希望「AI 总结全文」：可用**免费**方案如本地 [Ollama](https://ollama.com) 等；**付费**方案如 OpenAI / Claude 等 API。当前脚本未集成具体 API，如需可自行在写入前调用接口生成 `summary` 再写入。
 
 ## Obsidian 排版
 

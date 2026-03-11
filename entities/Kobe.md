@@ -1,3 +1,0 @@
-# Kobe
-
-entity type: unknown

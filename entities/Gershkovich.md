@@ -1,3 +1,0 @@
-# Gershkovich
-
-entity type: unknown

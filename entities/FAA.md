@@ -1,3 +1,0 @@
-# FAA
-
-entity type: unknown

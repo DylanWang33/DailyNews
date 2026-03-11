@@ -2,12 +2,14 @@
 """
 将 obsidian-snippets/daily-news-reader.css 安装到 Obsidian 库的 .obsidian/snippets/
 片段必须放在【你当前打开的库】的 vault/.obsidian/snippets 下，Obsidian 才能识别。
+安装说明仅在首次成功安装时打印一次。
 """
 import os
 import shutil
 
 _REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SOURCE = os.path.join(_REPO, "obsidian-snippets", "daily-news-reader.css")
+_CSS_DONE_FLAG = os.path.join(_REPO, "cache", ".css_install_done")
 
 
 def main():
@@ -51,8 +53,15 @@ def main():
         print("  源:", SOURCE)
         print("  目标:", dest)
         return 1
-    print("已安装到:", dest)
-    print("在 Obsidian 中：设置 -> 外观 -> CSS 代码片段 -> 重新加载 -> 打开 daily-news-reader")
+    # 仅首次安装时打印说明，之后不再提示
+    try:
+        os.makedirs(os.path.dirname(_CSS_DONE_FLAG), exist_ok=True)
+        if not os.path.isfile(_CSS_DONE_FLAG):
+            print("已安装到:", dest)
+            print("在 Obsidian 中：设置 -> 外观 -> CSS 代码片段 -> 重新加载 -> 打开 daily-news-reader")
+            open(_CSS_DONE_FLAG, "a").close()
+    except Exception:
+        pass
     return 0
 
 

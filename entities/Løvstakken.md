@@ -1,3 +1,0 @@
-# Løvstakken
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# ATM
-
-entity type: unknown

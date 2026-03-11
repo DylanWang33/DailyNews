@@ -1,3 +1,0 @@
-# • Send
-
-entity type: unknown

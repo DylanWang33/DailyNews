@@ -1,3 +1,0 @@
-# Ruth
-
-entity type: unknown

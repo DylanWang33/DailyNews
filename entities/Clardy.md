@@ -1,3 +1,0 @@
-# Clardy
-
-entity type: unknown

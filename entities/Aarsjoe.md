@@ -1,3 +1,0 @@
-# Aarsjoe
-
-entity type: unknown

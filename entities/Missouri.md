@@ -1,3 +1,0 @@
-# Missouri
-
-entity type: unknown

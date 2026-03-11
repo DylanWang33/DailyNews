@@ -1,3 +1,0 @@
-# Stevens
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Albertville
-
-entity type: unknown

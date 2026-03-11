@@ -1,3 +1,0 @@
-# Iraola
-
-entity type: unknown

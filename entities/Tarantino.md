@@ -1,3 +1,0 @@
-# Tarantino
-
-entity type: unknown

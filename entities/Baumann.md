@@ -1,3 +1,0 @@
-# Baumann
-
-entity type: unknown

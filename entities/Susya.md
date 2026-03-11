@@ -1,3 +1,0 @@
-# Susya
-
-entity type: unknown

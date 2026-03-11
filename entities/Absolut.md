@@ -1,3 +1,0 @@
-# Absolut
-
-entity type: unknown

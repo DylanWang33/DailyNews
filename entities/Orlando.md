@@ -1,3 +1,0 @@
-# Orlando
-
-entity type: unknown

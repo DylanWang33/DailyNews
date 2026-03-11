@@ -1,3 +1,0 @@
-# CCTV
-
-entity type: unknown

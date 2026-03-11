@@ -1,3 +1,0 @@
-# Meta
-
-entity type: unknown

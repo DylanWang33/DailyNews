@@ -1,3 +1,0 @@
-# Orme
-
-entity type: unknown

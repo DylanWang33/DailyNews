@@ -1,3 +1,0 @@
-# Manhattan
-
-entity type: unknown

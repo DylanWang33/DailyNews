@@ -1,3 +1,0 @@
-# Terzic
-
-entity type: unknown

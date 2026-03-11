@@ -1,3 +1,0 @@
-# Thundersley
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Adebayo
-
-entity type: unknown

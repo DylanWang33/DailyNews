@@ -1,3 +1,0 @@
-# Bybanen
-
-entity type: unknown

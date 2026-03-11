@@ -1,3 +1,0 @@
-# Reagan
-
-entity type: unknown

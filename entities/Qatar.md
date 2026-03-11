@@ -1,3 +1,0 @@
-# Qatar
-
-entity type: unknown

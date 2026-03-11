@@ -1,3 +1,0 @@
-# Epstein
-
-entity type: unknown

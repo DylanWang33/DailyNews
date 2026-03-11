@@ -1,3 +1,0 @@
-# Good
-
-entity type: unknown

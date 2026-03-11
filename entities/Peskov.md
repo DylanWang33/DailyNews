@@ -1,3 +1,0 @@
-# Peskov
-
-entity type: unknown

@@ -29,10 +29,13 @@ def extract_entities(text):
     return list(set(entities))
 
 
-def write_entity(base, entity):
+def write_entity(base, entity, date_str=None):
+    """写入实体笔记。date_str 若提供则写入 entities/YYYY-MM-DD/ 下，便于按日期删除释放空间。"""
     safe_name = _sanitize_entity_for_path(entity)
-    path = os.path.join(base, "entities", safe_name + ".md")
-    # 确保路径仍在 base 下
+    if date_str and isinstance(date_str, str) and re.match(r"^\d{4}-\d{2}-\d{2}$", date_str.strip()):
+        path = os.path.join(base, "entities", date_str.strip(), safe_name + ".md")
+    else:
+        path = os.path.join(base, "entities", safe_name + ".md")
     base_real = os.path.realpath(base)
     path_real = os.path.realpath(path)
     if not path_real.startswith(base_real):

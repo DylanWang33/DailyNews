@@ -1,3 +1,0 @@
-# Trump
-
-entity type: unknown

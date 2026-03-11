@@ -1,3 +1,0 @@
-# Estate
-
-entity type: unknown

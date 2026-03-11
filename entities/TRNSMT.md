@@ -1,3 +1,0 @@
-# TRNSMT
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Amtrak
-
-entity type: unknown

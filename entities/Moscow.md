@@ -1,3 +1,0 @@
-# Moscow
-
-entity type: unknown

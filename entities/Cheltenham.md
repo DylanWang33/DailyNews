@@ -1,3 +1,0 @@
-# Cheltenham
-
-entity type: unknown

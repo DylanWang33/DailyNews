@@ -1,3 +1,0 @@
-# Nagano
-
-entity type: unknown

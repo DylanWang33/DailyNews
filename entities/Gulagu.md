@@ -1,3 +1,0 @@
-# Gulagu
-
-entity type: unknown

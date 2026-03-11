@@ -1,3 +1,0 @@
-# CalMac
-
-entity type: unknown

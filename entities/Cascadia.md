@@ -1,3 +1,0 @@
-# Cascadia
-
-entity type: unknown

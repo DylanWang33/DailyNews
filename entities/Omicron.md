@@ -1,3 +1,0 @@
-# Omicron
-
-entity type: unknown

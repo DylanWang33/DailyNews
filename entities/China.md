@@ -1,3 +1,0 @@
-# China
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Knutson
-
-entity type: unknown

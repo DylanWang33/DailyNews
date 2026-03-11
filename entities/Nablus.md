@@ -1,3 +1,0 @@
-# Nablus
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Chicks
-
-entity type: unknown

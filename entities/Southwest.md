@@ -1,3 +1,0 @@
-# Southwest
-
-entity type: unknown

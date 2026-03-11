@@ -1,3 +1,0 @@
-# Philippines
-
-entity type: unknown

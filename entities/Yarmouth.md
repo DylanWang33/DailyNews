@@ -1,3 +1,0 @@
-# Yarmouth
-
-entity type: unknown

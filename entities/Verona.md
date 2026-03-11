@@ -1,3 +1,0 @@
-# Verona
-
-entity type: unknown

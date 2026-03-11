@@ -1,3 +1,0 @@
-# McConnell
-
-entity type: unknown

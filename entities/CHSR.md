@@ -1,3 +1,0 @@
-# CHSR
-
-entity type: unknown

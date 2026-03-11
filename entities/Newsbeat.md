@@ -1,3 +1,0 @@
-# Newsbeat
-
-entity type: unknown

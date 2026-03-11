@@ -1,3 +1,0 @@
-# LLC
-
-entity type: unknown

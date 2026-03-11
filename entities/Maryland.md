@@ -1,3 +1,0 @@
-# Maryland
-
-entity type: unknown

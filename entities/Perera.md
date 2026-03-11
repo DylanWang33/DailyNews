@@ -1,3 +1,0 @@
-# Perera
-
-entity type: unknown

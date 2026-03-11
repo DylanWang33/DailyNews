@@ -1,3 +1,0 @@
-# Longview
-
-entity type: unknown

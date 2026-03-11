@@ -1,3 +1,0 @@
-# TASS
-
-entity type: unknown

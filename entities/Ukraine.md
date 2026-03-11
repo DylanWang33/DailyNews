@@ -1,3 +1,0 @@
-# Ukraine
-
-entity type: unknown

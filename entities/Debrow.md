@@ -1,3 +1,0 @@
-# Debrow
-
-entity type: unknown

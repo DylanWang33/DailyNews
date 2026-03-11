@@ -1,3 +1,0 @@
-# Moderna
-
-entity type: unknown

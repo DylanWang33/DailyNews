@@ -1,3 +1,0 @@
-# Ireland
-
-entity type: unknown

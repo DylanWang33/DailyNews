@@ -1,3 +1,0 @@
-# Suranovas
-
-entity type: unknown

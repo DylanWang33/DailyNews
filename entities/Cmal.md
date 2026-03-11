@@ -1,3 +1,0 @@
-# Cmal
-
-entity type: unknown

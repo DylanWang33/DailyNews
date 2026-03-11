@@ -1,3 +1,0 @@
-# Connecticut
-
-entity type: unknown

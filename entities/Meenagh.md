@@ -1,3 +1,0 @@
-# Meenagh
-
-entity type: unknown

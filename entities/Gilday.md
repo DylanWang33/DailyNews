@@ -1,3 +1,0 @@
-# Gilday
-
-entity type: unknown

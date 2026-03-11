@@ -1,3 +1,0 @@
-# Fulham
-
-entity type: unknown

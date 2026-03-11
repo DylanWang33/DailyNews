@@ -1,3 +1,0 @@
-# Forsyth
-
-entity type: unknown

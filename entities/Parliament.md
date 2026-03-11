@@ -1,3 +1,0 @@
-# Parliament
-
-entity type: unknown

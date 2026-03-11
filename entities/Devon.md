@@ -1,3 +1,0 @@
-# Devon
-
-entity type: unknown

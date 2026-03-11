@@ -1,3 +1,0 @@
-# Curtis
-
-entity type: unknown

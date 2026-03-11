@@ -1,3 +1,0 @@
-# Havenside
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Vet
-
-entity type: unknown

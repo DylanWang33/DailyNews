@@ -1,3 +1,0 @@
-# Arsenal
-
-entity type: unknown

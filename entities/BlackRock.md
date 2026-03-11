@@ -1,3 +1,0 @@
-# BlackRock
-
-entity type: unknown

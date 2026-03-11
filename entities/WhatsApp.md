@@ -1,3 +1,0 @@
-# WhatsApp
-
-entity type: unknown

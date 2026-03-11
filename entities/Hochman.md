@@ -1,3 +1,0 @@
-# Hochman
-
-entity type: unknown

@@ -2,10 +2,12 @@
 obsidian_base: /Users/kryss/仓库/Dylan/DailyNews
 obsidian_vault_root: /Users/kryss/仓库/Dylan
 
-# 我的关注：关键词列表，从「每日新闻」中筛选契合度 >= relevance_threshold 的条目
+# 我的关注：关键词列表。分号表示多个标签且必须全部命中（在 entities/标题/摘要 中）才归入该组
+# 例：美国;伊朗 表示文章须同时包含「美国」和「伊朗」才放入 我的关注/日期/美国;伊朗.md
 keywords:
   - 油价
-  - 美国伊朗
+  - 美国;伊朗
+  - 战争
   # - 通胀
   # - oil
   # - OPEC

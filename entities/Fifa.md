@@ -1,3 +1,0 @@
-# Fifa
-
-entity type: unknown

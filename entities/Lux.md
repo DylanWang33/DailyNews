@@ -1,3 +1,0 @@
-# Lux
-
-entity type: unknown

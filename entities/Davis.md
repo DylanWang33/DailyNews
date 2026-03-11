@@ -1,3 +1,0 @@
-# Davis
-
-entity type: unknown

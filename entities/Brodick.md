@@ -1,3 +1,0 @@
-# Brodick
-
-entity type: unknown

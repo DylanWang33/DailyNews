@@ -1,3 +1,0 @@
-# Nashville
-
-entity type: unknown

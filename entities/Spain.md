@@ -1,3 +1,0 @@
-# Spain
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# VideoWeather
-
-entity type: unknown

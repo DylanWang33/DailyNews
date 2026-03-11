@@ -1,3 +1,0 @@
-# Tesla
-
-entity type: unknown

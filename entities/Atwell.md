@@ -1,3 +1,0 @@
-# Atwell
-
-entity type: unknown

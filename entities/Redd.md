@@ -1,3 +1,0 @@
-# Redd
-
-entity type: unknown

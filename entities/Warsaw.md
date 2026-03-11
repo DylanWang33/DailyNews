@@ -1,3 +1,0 @@
-# Warsaw
-
-entity type: unknown

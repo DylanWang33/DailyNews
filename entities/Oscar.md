@@ -1,3 +1,0 @@
-# Oscar
-
-entity type: unknown

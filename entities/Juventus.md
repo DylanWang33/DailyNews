@@ -1,3 +1,0 @@
-# Juventus
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Classical
-
-entity type: unknown

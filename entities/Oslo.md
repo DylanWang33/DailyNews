@@ -1,3 +1,0 @@
-# Oslo
-
-entity type: unknown

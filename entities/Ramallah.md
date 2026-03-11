@@ -1,3 +1,0 @@
-# Ramallah
-
-entity type: unknown

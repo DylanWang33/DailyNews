@@ -1,3 +1,0 @@
-# Ortiz
-
-entity type: unknown

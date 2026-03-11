@@ -1,3 +1,0 @@
-# Energy
-
-entity type: unknown

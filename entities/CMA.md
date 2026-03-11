@@ -1,3 +1,0 @@
-# CMA
-
-entity type: unknown

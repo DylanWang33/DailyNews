@@ -1,3 +1,0 @@
-# Boston
-
-entity type: unknown

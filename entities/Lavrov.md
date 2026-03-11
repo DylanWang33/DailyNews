@@ -1,3 +1,0 @@
-# Lavrov
-
-entity type: unknown

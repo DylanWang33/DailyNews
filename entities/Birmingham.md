@@ -1,3 +1,0 @@
-# Birmingham
-
-entity type: unknown

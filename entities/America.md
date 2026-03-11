@@ -1,3 +1,0 @@
-# America
-
-entity type: unknown

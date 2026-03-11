@@ -1,3 +1,0 @@
-# Johannes
-
-entity type: unknown

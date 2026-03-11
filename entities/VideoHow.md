@@ -1,3 +1,0 @@
-# VideoHow
-
-entity type: unknown

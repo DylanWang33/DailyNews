@@ -1,3 +1,0 @@
-# Stacey
-
-entity type: unknown

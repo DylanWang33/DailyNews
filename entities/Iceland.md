@@ -1,3 +1,0 @@
-# Iceland
-
-entity type: unknown

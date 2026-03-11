@@ -1,3 +1,0 @@
-# BVA
-
-entity type: unknown

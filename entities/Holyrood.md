@@ -1,3 +1,0 @@
-# Holyrood
-
-entity type: unknown

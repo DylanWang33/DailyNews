@@ -1,3 +1,0 @@
-# Telegram
-
-entity type: unknown

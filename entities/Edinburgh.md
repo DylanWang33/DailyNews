@@ -1,3 +1,0 @@
-# Edinburgh
-
-entity type: unknown

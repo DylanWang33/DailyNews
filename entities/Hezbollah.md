@@ -1,3 +1,0 @@
-# Hezbollah
-
-entity type: unknown

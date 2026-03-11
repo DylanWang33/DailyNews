@@ -1,3 +1,0 @@
-# Linden
-
-entity type: unknown

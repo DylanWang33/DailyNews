@@ -1,3 +1,0 @@
-# Rosalía
-
-entity type: unknown

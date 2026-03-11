@@ -1,3 +1,0 @@
-# Japan
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# APT
-
-entity type: unknown

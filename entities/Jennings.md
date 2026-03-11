@@ -1,3 +1,0 @@
-# Jennings
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Shirshikov
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Canada
-
-entity type: unknown

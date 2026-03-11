@@ -1,3 +1,0 @@
-# Nelson
-
-entity type: unknown

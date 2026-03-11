@@ -1,3 +1,0 @@
-# Alstom
-
-entity type: unknown

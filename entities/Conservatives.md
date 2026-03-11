@@ -1,3 +1,0 @@
-# Conservatives
-
-entity type: unknown

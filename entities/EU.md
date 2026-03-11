@@ -1,3 +1,0 @@
-# EU
-
-entity type: unknown

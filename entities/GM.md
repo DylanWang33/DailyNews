@@ -1,3 +1,0 @@
-# GM
-
-entity type: unknown

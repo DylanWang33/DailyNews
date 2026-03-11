@@ -1,3 +1,0 @@
-# IRS
-
-entity type: unknown

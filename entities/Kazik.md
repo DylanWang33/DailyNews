@@ -1,3 +1,0 @@
-# Kazik
-
-entity type: unknown

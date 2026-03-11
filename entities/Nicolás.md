@@ -1,3 +1,0 @@
-# Nicolás
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Perry
-
-entity type: unknown

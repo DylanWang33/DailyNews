@@ -1,3 +1,0 @@
-# Yorkshire
-
-entity type: unknown

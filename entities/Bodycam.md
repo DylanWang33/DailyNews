@@ -1,3 +1,0 @@
-# Bodycam
-
-entity type: unknown

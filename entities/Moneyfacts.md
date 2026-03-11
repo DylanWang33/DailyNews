@@ -1,3 +1,0 @@
-# Moneyfacts
-
-entity type: unknown

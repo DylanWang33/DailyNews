@@ -1,3 +1,0 @@
-# Germany
-
-entity type: unknown

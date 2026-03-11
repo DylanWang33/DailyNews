@@ -1,3 +1,0 @@
-# Oleksandr
-
-entity type: unknown

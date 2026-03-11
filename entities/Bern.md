@@ -1,3 +1,0 @@
-# Bern
-
-entity type: unknown

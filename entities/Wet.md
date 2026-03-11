@@ -1,3 +1,0 @@
-# Wet
-
-entity type: unknown

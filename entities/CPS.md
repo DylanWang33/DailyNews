@@ -1,3 +1,0 @@
-# CPS
-
-entity type: unknown

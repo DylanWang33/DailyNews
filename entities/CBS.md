@@ -1,3 +1,0 @@
-# CBS
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# TGV
-
-entity type: unknown

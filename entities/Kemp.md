@@ -1,3 +1,0 @@
-# Kemp
-
-entity type: unknown

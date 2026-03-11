@@ -1,3 +1,0 @@
-# Lula
-
-entity type: unknown

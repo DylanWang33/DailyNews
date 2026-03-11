@@ -1,3 +1,0 @@
-# Lillehammer
-
-entity type: unknown

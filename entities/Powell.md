@@ -1,3 +1,0 @@
-# Powell
-
-entity type: unknown

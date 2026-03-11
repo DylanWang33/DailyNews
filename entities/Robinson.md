@@ -1,3 +1,0 @@
-# Robinson
-
-entity type: unknown

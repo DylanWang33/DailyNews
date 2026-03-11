@@ -1,3 +1,0 @@
-# State
-
-entity type: unknown

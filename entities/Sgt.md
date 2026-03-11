@@ -1,3 +1,0 @@
-# Sgt
-
-entity type: unknown

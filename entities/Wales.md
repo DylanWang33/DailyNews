@@ -1,3 +1,0 @@
-# Wales
-
-entity type: unknown

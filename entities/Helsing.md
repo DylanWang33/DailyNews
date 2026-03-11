@@ -1,3 +1,0 @@
-# Helsing
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Merritt
-
-entity type: unknown

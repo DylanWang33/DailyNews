@@ -1,3 +1,0 @@
-# Kononova
-
-entity type: unknown

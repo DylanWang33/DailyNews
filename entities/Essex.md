@@ -1,3 +1,0 @@
-# Essex
-
-entity type: unknown

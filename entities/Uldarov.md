@@ -1,3 +1,0 @@
-# Uldarov
-
-entity type: unknown

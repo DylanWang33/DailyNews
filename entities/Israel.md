@@ -1,3 +1,0 @@
-# Israel
-
-entity type: unknown

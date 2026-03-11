@@ -1,3 +1,0 @@
-# Sherman
-
-entity type: unknown

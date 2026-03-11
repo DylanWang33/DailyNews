@@ -1,3 +1,0 @@
-# Aldi
-
-entity type: unknown

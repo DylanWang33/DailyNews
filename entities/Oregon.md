@@ -1,3 +1,0 @@
-# Oregon
-
-entity type: unknown

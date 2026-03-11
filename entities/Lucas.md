@@ -1,3 +1,0 @@
-# Lucas
-
-entity type: unknown

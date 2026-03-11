@@ -1,3 +1,0 @@
-# Budapest
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Sisa
-
-entity type: unknown

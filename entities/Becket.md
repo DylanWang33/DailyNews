@@ -1,3 +1,0 @@
-# Becket
-
-entity type: unknown

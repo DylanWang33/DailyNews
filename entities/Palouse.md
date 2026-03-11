@@ -1,3 +1,0 @@
-# Palouse
-
-entity type: unknown

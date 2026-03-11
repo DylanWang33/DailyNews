@@ -1,3 +1,0 @@
-# Rihanna
-
-entity type: unknown

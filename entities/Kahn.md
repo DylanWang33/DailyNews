@@ -1,3 +1,0 @@
-# Kahn
-
-entity type: unknown

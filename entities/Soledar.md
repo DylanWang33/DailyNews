@@ -1,3 +1,0 @@
-# Soledar
-
-entity type: unknown

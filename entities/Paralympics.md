@@ -1,3 +1,0 @@
-# Paralympics
-
-entity type: unknown

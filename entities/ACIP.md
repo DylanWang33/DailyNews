@@ -1,3 +1,0 @@
-# ACIP
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Ruzumna
-
-entity type: unknown

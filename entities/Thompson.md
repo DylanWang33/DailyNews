@@ -1,3 +1,0 @@
-# Thompson
-
-entity type: unknown

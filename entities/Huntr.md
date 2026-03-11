@@ -1,3 +1,0 @@
-# Huntr
-
-entity type: unknown

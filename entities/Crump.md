@@ -1,3 +1,0 @@
-# Crump
-
-entity type: unknown

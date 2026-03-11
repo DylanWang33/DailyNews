@@ -1,3 +1,0 @@
-# Pfizer
-
-entity type: unknown

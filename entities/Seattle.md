@@ -1,3 +1,0 @@
-# Seattle
-
-entity type: unknown

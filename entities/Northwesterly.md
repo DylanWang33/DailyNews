@@ -1,3 +1,0 @@
-# Northwesterly
-
-entity type: unknown

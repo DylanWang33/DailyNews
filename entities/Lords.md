@@ -1,3 +1,0 @@
-# Lords
-
-entity type: unknown

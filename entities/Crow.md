@@ -1,3 +1,0 @@
-# Crow
-
-entity type: unknown

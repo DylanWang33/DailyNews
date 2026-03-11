@@ -1,3 +1,0 @@
-# MGO
-
-entity type: unknown

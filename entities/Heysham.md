@@ -1,3 +1,0 @@
-# Heysham
-
-entity type: unknown

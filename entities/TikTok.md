@@ -1,3 +1,0 @@
-# TikTok
-
-entity type: unknown

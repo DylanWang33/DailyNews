@@ -1,3 +1,0 @@
-# Harris
-
-entity type: unknown

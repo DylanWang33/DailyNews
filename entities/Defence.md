@@ -1,3 +1,0 @@
-# Defence
-
-entity type: unknown

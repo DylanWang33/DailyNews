@@ -1,3 +1,0 @@
-# Switzerland
-
-entity type: unknown

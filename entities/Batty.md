@@ -1,3 +1,0 @@
-# Batty
-
-entity type: unknown

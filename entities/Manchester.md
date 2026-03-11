@@ -1,3 +1,0 @@
-# Manchester
-
-entity type: unknown

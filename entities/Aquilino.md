@@ -1,3 +1,0 @@
-# Aquilino
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Preston
-
-entity type: unknown

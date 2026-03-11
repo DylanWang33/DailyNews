@@ -1,3 +1,0 @@
-# Khaled
-
-entity type: unknown

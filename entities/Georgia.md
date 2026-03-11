@@ -1,3 +1,0 @@
-# Georgia
-
-entity type: unknown

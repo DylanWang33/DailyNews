@@ -1,3 +1,0 @@
-# Louise
-
-entity type: unknown

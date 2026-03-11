@@ -1,3 +1,0 @@
-# Bakhmut
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# NBA
-
-entity type: unknown

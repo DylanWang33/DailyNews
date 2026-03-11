@@ -1,3 +1,0 @@
-# Osechkin
-
-entity type: unknown

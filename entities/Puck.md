@@ -1,3 +1,0 @@
-# Puck
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Nature
-
-entity type: unknown

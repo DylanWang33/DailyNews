@@ -1,3 +1,0 @@
-# McCabe
-
-entity type: unknown

@@ -1,3 +1,0 @@
-# Kentish
-
-entity type: unknown

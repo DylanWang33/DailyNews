@@ -1,3 +1,0 @@
-# KJRH
-
-entity type: unknown

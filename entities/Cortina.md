@@ -1,3 +1,0 @@
-# Cortina
-
-entity type: unknown

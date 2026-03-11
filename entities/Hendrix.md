@@ -1,3 +1,0 @@
-# Hendrix
-
-entity type: unknown
