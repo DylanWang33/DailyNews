@@ -1,0 +1,42 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS metadata
+._*
+.Spotlight-V100
+.Trashes
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# virtualenv
+venv/
+.env/
+
+# Logs
+*.log
+
+# Editor
+.vscode/
+.idea/
+
+# Obsidian local config
+.obsidian/workspace.json
+.obsidian/cache
+.obsidian/workspace
+.obsidian/plugins/*/data.json
+
+# Node
+node_modules/
+
+# Temporary
+tmp/
+temp/
+
+# System
+Thumbs.db
