@@ -1,23 +1,33 @@
-import datetime
 import os
-import subprocess
+import datetime
 
-base = "/Users/kryss/DailyNewsRepo"
+BASE = "/Users/kryss/DailyNewsRepo"
 
-today = datetime.date.today().isoformat()
+news_dir = os.path.join(BASE, "news")
+os.makedirs(news_dir, exist_ok=True)
 
-path = os.path.join(base, "news", f"{today}.md")
+now = datetime.datetime.now()
+date = now.strftime("%Y-%m-%d")
+time = now.strftime("%H%M")
 
-os.makedirs(os.path.dirname(path), exist_ok=True)
+filename = f"{date}_{time}.md"
+filepath = os.path.join(news_dir, filename)
 
-with open(path, "w") as f:
-    f.write("# Daily News\n")
+content = f"""# Daily News {date}
 
-print("created:", path)
+生成时间: {now}
 
-def run(cmd):
-    subprocess.run(cmd, check=False)
+---
 
-run(["git","add","."])
-run(["git","commit","-m","auto news"])
-run(["git","push"])
+## 今日要闻
+
+- 示例新闻1
+- 示例新闻2
+- 示例新闻3
+
+"""
+
+with open(filepath, "w", encoding="utf-8") as f:
+    f.write(content)
+
+print("created:", filepath)
