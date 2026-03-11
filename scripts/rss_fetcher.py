@@ -1,11 +1,14 @@
-# 抓 RSS：仅从 sources/rss.yaml 加载
+# 抓 RSS：从 sources/rss.yaml 或 rss/feeds-all.opml 加载
 
 import os
 import re
+import html
+import xml.etree.ElementTree as ET
 import feedparser
 import yaml
 
 _ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OPML_PATH = os.path.join(_ROOT, "rss", "feeds-all.opml")
 
 
 def load_sources():
@@ -85,16 +88,72 @@ def _is_likely_homepage(url):
     return False
 
 
+def _strip_html(text):
+    """简单去掉 HTML 标签，得到纯文本（用于 RSS summary）。"""
+    if not text or not isinstance(text, str):
+        return ""
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text[:2000]
+
+
 def fetch_rss(url):
-    """抓取 RSS feed，返回 [{"title","link","published"}, ...]。link 优先为文章页 URL。"""
+    """抓取 RSS feed，返回 [{"title","link","published","summary"}, ...]。link 优先为文章页 URL。"""
     if not url or not isinstance(url, str):
         return []
     feed = feedparser.parse(url)
     items = []
     for entry in feed.entries:
+        summary = ""
+        for attr in ("summary", "description", "content"):
+            raw = getattr(entry, attr, None)
+            if hasattr(raw, "value"):
+                raw = raw.value
+            if raw and isinstance(raw, str):
+                summary = _strip_html(raw)
+                break
         items.append({
             "title": getattr(entry, "title", "") or "",
             "link": _entry_best_link(entry, url),
             "published": getattr(entry, "published", "") or "",
+            "summary": summary,
         })
     return items
+
+
+def load_categories_from_opml():
+    """从 rss/feeds-all.opml 加载分类与源，返回 { "新闻": [{"name","url"}, ...], "科技": [...], ... }。"""
+    if not os.path.isfile(OPML_PATH):
+        return {}
+    tree = ET.parse(OPML_PATH)
+    root = tree.getroot()
+    body = root.find(".//body")
+    if body is None:
+        body = root
+    result = {}
+    for cat_outline in body:
+        if cat_outline.tag != "outline":
+            continue
+        cat_name = (cat_outline.get("text") or cat_outline.get("title") or "").strip()
+        cat_name = html.unescape(cat_name)
+        xml_url = (cat_outline.get("xmlUrl") or "").strip()
+        if xml_url:
+            if cat_name not in result:
+                result[cat_name] = []
+            result[cat_name].append({
+                "name": cat_name,
+                "url": xml_url,
+            })
+        else:
+            feeds = []
+            for child in cat_outline:
+                if child.tag != "outline":
+                    continue
+                name = (child.get("text") or child.get("title") or "").strip()
+                name = html.unescape(name)
+                url = (child.get("xmlUrl") or "").strip()
+                if url:
+                    feeds.append({"name": name, "url": url})
+            if feeds and cat_name:
+                result[cat_name] = feeds
+    return result
