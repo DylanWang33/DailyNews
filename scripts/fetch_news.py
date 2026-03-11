@@ -24,6 +24,7 @@ from rss_fetcher import load_categories_from_opml, fetch_rss
 from translator import translate, translate_zh_to_en
 from hot_writer import write_daily_news, write_my_following
 from git_sync import push
+from feed_health import FeedHealthTracker
 
 
 def _has_cjk(s):
@@ -49,17 +50,17 @@ def _parse_keyword_groups(keywords):
     return out
 
 
-def _fetch_all_daily_news():
+def _fetch_all_daily_news(health_tracker=None):
     """
     从 OPML 拉取所有源、所有条目，返回 { 分类: { 源名: [items] } }。
-    英文标题优先用 LLM 批量翻译（openclaw_translate: true 时），否则用 argostranslate 逐条翻译。
+    - 传入 health_tracker 记录各 URL 的超时/成功状态
+    - 英文标题优先 LLM 批量翻译，回退 argostranslate
     """
     categories = load_categories_from_opml()
     if not categories:
         return {}
 
-    # 收集所有需要翻译的英文标题，用于后续批量 LLM 翻译
-    all_items_needing_translation = []  # [(category_name, source_name, item_dict)]
+    all_items_needing_translation = []
 
     result = {}
     for category_name, sources in categories.items():
@@ -73,18 +74,19 @@ def _fetch_all_daily_news():
                 continue
             items = []
             seen_links = set()
-            for raw in fetch_rss(url):
+            for raw in fetch_rss(url, health_tracker=health_tracker):
                 link = (raw.get("link") or "").strip()
                 title = (raw.get("title") or "").strip()
                 if not link or not title or link in seen_links:
                     continue
                 seen_links.add(link)
                 item = {
-                    "title": title,          # 暂存原始英文标题，批量翻译后替换
+                    "title": title,
                     "link": link,
                     "source": name,
                     "title_original": None,
                     "summary": (raw.get("summary") or "").strip(),
+                    "pub_date": (raw.get("pub_date") or "").strip(),
                     "_needs_translation": not _has_cjk(title),
                 }
                 items.append(item)
@@ -95,10 +97,8 @@ def _fetch_all_daily_news():
         if by_source:
             result[category_name] = by_source
 
-    # 翻译英文标题：优先 LLM 批量翻译，回退到 argostranslate 逐条翻译
     _translate_titles(all_items_needing_translation)
 
-    # 清理临时标志，确保输出结构干净
     for by_source in result.values():
         for items in by_source.values():
             for item in items:
@@ -374,10 +374,16 @@ def main():
     relevance_threshold = float(get_config("relevance_threshold") or 0.7)
     date_str = date.today().isoformat()
 
-    # 1) 每日新闻：从 OPML 拉取全部，LLM 可选批量翻译标题
-    daily_news = _fetch_all_daily_news()
+    # 1) 每日新闻：从 OPML 拉取全部，同步记录 URL 健康状态
+    health = FeedHealthTracker()
+    daily_news = _fetch_all_daily_news(health_tracker=health)
     if daily_news:
         write_daily_news(BASE, daily_news)
+
+    # 健康检查：删除连续超时的失效源（有足够正常请求才操作）
+    dead = health.get_dead_urls()
+    if dead:
+        health.prune_opml(dead)
 
     # 2) 我的关注：AI 筛选（OpenClaw 可用时）或传统关键词匹配（回退）
     if daily_news and keyword_groups:

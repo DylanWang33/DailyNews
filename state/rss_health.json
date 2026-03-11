@@ -1,0 +1,26 @@
+{
+  "http://good0.com/rss": {
+    "consecutive_timeouts": 0,
+    "last_ok": "2026-03-12T04:00:36.859394"
+  },
+  "http://good1.com/rss": {
+    "consecutive_timeouts": 0,
+    "last_ok": "2026-03-12T04:00:36.859518"
+  },
+  "http://good2.com/rss": {
+    "consecutive_timeouts": 0,
+    "last_ok": "2026-03-12T04:00:36.859594"
+  },
+  "http://good3.com/rss": {
+    "consecutive_timeouts": 0,
+    "last_ok": "2026-03-12T04:00:36.859658"
+  },
+  "http://good4.com/rss": {
+    "consecutive_timeouts": 0,
+    "last_ok": "2026-03-12T04:00:36.859720"
+  },
+  "http://dead.com/rss": {
+    "consecutive_timeouts": 3,
+    "last_timeout": "2026-03-12T04:00:36.859974"
+  }
+}

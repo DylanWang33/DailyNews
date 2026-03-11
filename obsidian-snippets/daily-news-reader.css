@@ -1,110 +1,143 @@
-/* DailyNews 阅读样式 - Obsidian 新闻/简报排版
- * 必须放在【Obsidian 库】的 .obsidian/snippets/ 下并启用，不是 DailyNewsRepo
- * 设置 -> 外观 -> CSS 代码片段 -> 打开片段文件夹 -> 粘贴本文件 -> 重新加载 -> 打开开关
- */
+/* ============================================================
+   DailyNews 阅读体验 CSS — 卡片式新闻排版
+   安装：复制到【Obsidian 库】的 .obsidian/snippets/ 并启用
+   设置 → 外观 → CSS 代码片段 → 重新加载 → 打开开关
+   ============================================================ */
 
-/* ========== 阅读视图（Reading View）========== */
-.markdown-preview-view.markdown-rendered {
-  font-family: "Source Han Serif SC", "Noto Serif SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Georgia", serif !important;
-  font-size: 17px !important;
-  line-height: 1.8 !important;
-  color: #1a1a1a !important;
-}
-
-.markdown-preview-view .markdown-preview-sizer {
-  max-width: 720px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: 2em !important;
-  padding-right: 2em !important;
-}
-
-/* 阅读视图 - 标题 */
-.markdown-preview-view.markdown-rendered h1 {
-  font-size: 1.65em !important;
-  font-weight: 600 !important;
-  margin-top: 1.2em !important;
-  margin-bottom: 0.5em !important;
-  padding-bottom: 0.35em !important;
-  border-bottom: 1px solid #e2e8f0 !important;
-  color: #0f172a !important;
-}
-
-.markdown-preview-view.markdown-rendered h2 {
-  font-size: 1.35em !important;
-  font-weight: 600 !important;
-  margin-top: 1em !important;
-  margin-bottom: 0.4em !important;
+/* ─── 全局字体与行距 ───────────────────────────────────────── */
+.markdown-preview-view {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    "Source Han Sans SC", "Noto Sans CJK SC", -apple-system, sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.75 !important;
   color: #1e293b !important;
 }
 
-.markdown-preview-view.markdown-rendered h3 {
+.markdown-preview-view .markdown-preview-sizer {
+  max-width: 780px !important;
+  margin: 0 auto !important;
+  padding: 1.5em 2em !important;
+}
+
+/* ─── 顶级标题：来源名称 ───────────────────────────────────── */
+.markdown-preview-view h1 {
+  font-size: 1.5em !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  border-bottom: 2px solid #3b82f6 !important;
+  padding-bottom: 0.4em !important;
+  margin: 1.5em 0 1em !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* ─── 分类标题 ──────────────────────────────────────────────── */
+.markdown-preview-view h2 {
   font-size: 1.15em !important;
   font-weight: 600 !important;
-  margin-top: 0.9em !important;
-  margin-bottom: 0.3em !important;
-  color: #334155 !important;
+  color: #1e40af !important;
+  margin: 1.2em 0 0.5em !important;
 }
 
-/* 阅读视图 - 段落与列表 */
-.markdown-preview-view.markdown-rendered p {
-  margin-bottom: 0.9em !important;
-  text-align: justify !important;
-  word-break: break-word !important;
+/* ─── 文章卡片：粗体链接 = 新闻标题 ───────────────────────── */
+/* **N. [标题](url)** 渲染为卡片标题 */
+.markdown-preview-view strong {
+  font-weight: 600 !important;
+  color: #1e293b !important;
 }
 
-.markdown-preview-view.markdown-rendered ul,
-.markdown-preview-view.markdown-rendered ol {
-  margin: 0.5em 0 1em !important;
-  padding-left: 1.6em !important;
+.markdown-preview-view strong a,
+.markdown-preview-view strong > a {
+  font-size: 1.05em !important;
+  font-weight: 600 !important;
+  color: #1d4ed8 !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  line-height: 1.6 !important;
 }
 
-.markdown-preview-view.markdown-rendered li {
-  margin-bottom: 0.4em !important;
+.markdown-preview-view strong a:hover {
+  color: #1e40af !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
 }
 
-.markdown-preview-view.markdown-rendered hr {
+/* ─── 摘要区域：blockquote = 内容简介 ─────────────────────── */
+.markdown-preview-view blockquote {
+  border-left: 3px solid #93c5fd !important;
+  background: #f0f7ff !important;
+  margin: 0.4em 0 0.5em 0 !important;
+  padding: 0.5em 1em !important;
+  border-radius: 0 6px 6px 0 !important;
+  color: #374151 !important;
+  font-size: 0.93em !important;
+  line-height: 1.65 !important;
+}
+
+/* 深色模式适配 */
+.theme-dark .markdown-preview-view blockquote {
+  background: rgba(59, 130, 246, 0.08) !important;
+  border-left-color: #3b82f6 !important;
+  color: #d1d5db !important;
+}
+
+/* ─── 元信息：来源 + 时间 ──────────────────────────────────── */
+.markdown-preview-view small,
+.markdown-preview-view p > small {
+  color: #94a3b8 !important;
+  font-size: 0.82em !important;
+  display: block !important;
+  margin: 0.2em 0 0 0 !important;
+}
+
+/* ─── 原英文标题（斜体）──────────────────────────────────────── */
+.markdown-preview-view em {
+  color: #64748b !important;
+  font-style: italic !important;
+  font-size: 0.88em !important;
+}
+
+/* ─── 分割线：文章间分隔 ─────────────────────────────────────── */
+.markdown-preview-view hr {
   border: none !important;
   border-top: 1px solid #e2e8f0 !important;
-  margin: 1.5em 0 !important;
+  margin: 0.6em 0 !important;
 }
 
-/* 阅读视图 - 链接 */
-.markdown-preview-view.markdown-rendered a {
+.theme-dark .markdown-preview-view hr {
+  border-top-color: #334155 !important;
+}
+
+/* ─── frontmatter 隐藏（阅读视图不显示 YAML 块）────────────── */
+.markdown-preview-view .metadata-container {
+  display: none !important;
+}
+
+/* ─── 我的关注：稍强调摘要区 ─────────────────────────────────── */
+/* 我的关注文件中的 blockquote 用更深的左边框色 */
+[data-path*="我的关注"] .markdown-preview-view blockquote {
+  border-left-color: #f59e0b !important;
+  background: #fffbeb !important;
+}
+
+.theme-dark [data-path*="我的关注"] .markdown-preview-view blockquote {
+  background: rgba(245, 158, 11, 0.08) !important;
+  border-left-color: #f59e0b !important;
+}
+
+/* ─── 链接通用样式 ────────────────────────────────────────────── */
+.markdown-preview-view a {
   color: #2563eb !important;
   text-decoration: none !important;
-  border-bottom: 1px solid rgba(37, 99, 235, 0.35) !important;
 }
 
-.markdown-preview-view.markdown-rendered a:hover {
-  color: #1d4ed8 !important;
-  border-bottom-color: #1d4ed8 !important;
+.markdown-preview-view a:hover {
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
 }
 
-.markdown-preview-view.markdown-rendered blockquote {
-  border-left: 4px solid #cbd5e1 !important;
-  margin: 0.8em 0 !important;
-  padding: 0.4em 1em !important;
-  background: #f8fafc !important;
-  color: #475569 !important;
-}
-
-.markdown-preview-view.markdown-rendered code {
-  font-family: "SF Mono", "Menlo", "Consolas", monospace !important;
-  font-size: 0.9em !important;
-  background: #f1f5f9 !important;
-  padding: 0.15em 0.4em !important;
-  border-radius: 4px !important;
-}
-
-/* ========== 编辑/即时预览（Live Preview）========== */
+/* ─── Live Preview 同步优化 ──────────────────────────────────── */
 .markdown-source-view.mod-cm6 .cm-content {
-  font-family: "Source Han Serif SC", "Noto Serif SC", "PingFang SC", "Georgia", serif !important;
-  font-size: 16px !important;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif !important;
+  font-size: 15px !important;
   line-height: 1.75 !important;
-}
-
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
-  max-width: 720px !important;
 }
