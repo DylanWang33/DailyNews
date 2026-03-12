@@ -23,4 +23,9 @@ fi
 "${REPO}/venv/bin/python" "${REPO}/scripts/install_obsidian_css.py" 2>/dev/null || true
 
 "${REPO}/venv/bin/python" "${REPO}/scripts/fetch_news.py"
-exit $?
+FETCH_EXIT=$?
+
+# 抓取今日头条文章
+"${REPO}/venv/bin/python" "${REPO}/scripts/toutiao_fetcher.py" || true
+
+exit $FETCH_EXIT

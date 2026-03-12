@@ -6,32 +6,47 @@
       <body>
       
 <outline text="新闻" title="新闻">
-<outline text="iDaily 每日环球视野" title="iDaily 每日环球视野" type="rss" xmlUrl="https://plink.anyfeeder.com/idaily/today"  />
-<outline text="求是网" title="求是网" type="rss" xmlUrl="https://plink.anyfeeder.com/qstheory"  />
-<outline text="网易新闻 / 今日关注" title="网易新闻 / 今日关注" type="rss" xmlUrl="https://plink.anyfeeder.com/netease/today"  />
-<outline text="新华网 / 新华社新闻" title="新华网 / 新华社新闻" type="rss" xmlUrl="https://plink.anyfeeder.com/newscn/whxw"  />
-<outline text="联合早报 / 中国" title="联合早报 / 中国" type="rss" xmlUrl="https://plink.anyfeeder.com/zaobao/realtime/china"  />
-<outline text="联合早报 / 国际" title="联合早报 / 国际" type="rss" xmlUrl="https://plink.anyfeeder.com/zaobao/realtime/world"  />
-<outline text="南方周末 / 新闻" title="南方周末 / 新闻" type="rss" xmlUrl="https://plink.anyfeeder.com/infzm/news"  />
-<outline text="南方周末 / 推荐" title="南方周末 / 推荐" type="rss" xmlUrl="https://plink.anyfeeder.com/infzm/recommends"  />
-<outline text="澎湃新闻" title="澎湃新闻" type="rss" xmlUrl="https://plink.anyfeeder.com/thepaper"  />
-<outline text="人民网 / 头条" title="人民网 / 头条" type="rss" xmlUrl="https://plink.anyfeeder.com/people"  />
-<outline text="人民网 / 国内新闻" title="人民网 / 国内新闻" type="rss" xmlUrl="https://plink.anyfeeder.com/people/politics"  />
-<outline text="人民网 / 国际新闻" title="人民网 / 国际新闻" type="rss" xmlUrl="https://plink.anyfeeder.com/people/world"  />
-<outline text="人民网 / 英语新闻" title="人民网 / 英语新闻" type="rss" xmlUrl="https://plink.anyfeeder.com/people/english"  />
-<outline text="新京报" title="新京报" type="rss" xmlUrl="https://plink.anyfeeder.com/bjnews"  />
-<outline text="人民日报" title="人民日报" type="rss" xmlUrl="https://plink.anyfeeder.com/people-daily"  />
-<outline text="光明日报" title="光明日报" type="rss" xmlUrl="https://plink.anyfeeder.com/guangmingribao"  />
-<outline text="解放军报" title="解放军报" type="rss" xmlUrl="https://plink.anyfeeder.com/jiefangjunbao"  />
-<outline text="中国日报 / 双语新闻" title="中国日报 / 双语新闻" type="rss" xmlUrl="https://plink.anyfeeder.com/chinadaily/dual"  />
-<outline text="中国日报 / 专栏" title="中国日报 / 专栏" type="rss" xmlUrl="https://plink.anyfeeder.com/chinadaily/column"  />
-<outline text="中国日报 / 时政" title="中国日报 / 时政" type="rss" xmlUrl="https://plink.anyfeeder.com/chinadaily/china"  />
-<outline text="中国日报 / 资讯" title="中国日报 / 资讯" type="rss" xmlUrl="https://plink.anyfeeder.com/chinadaily/world"  />
-<outline text="中国日报 / 财经" title="中国日报 / 财经" type="rss" xmlUrl="https://plink.anyfeeder.com/chinadaily/caijing"  />
-<outline text="喷嚏网 / 铂程斋" title="喷嚏网 / 铂程斋" type="rss" xmlUrl="https://plink.anyfeeder.com/dapenti/xilei"  />
-<outline text="腾讯新闻 / 国际" title="腾讯新闻 / 国际" type="rss" xmlUrl="https://plink.anyfeeder.com/qq/news/world"  />
-<outline text="腾讯新闻 / 国内" title="腾讯新闻 / 国内" type="rss" xmlUrl="https://plink.anyfeeder.com/qq/news/china"  />
-<outline text="界面新闻: 新闻" title="界面新闻: 新闻" type="rss" xmlUrl="https://plink.anyfeeder.com/jiemian/news"  />
+  <outline text="求是网" title="求是网" type="rss" xmlUrl="https://plink.anyfeeder.com/qstheory"  />
+  <outline text="法广 - 时事与新闻直播" title="法广" type="rss" xmlUrl="
+    http://cn.rfi.fr/general/rss/"  />
+  <outline text="纽约时报中文网" title="纽约时报中文网" type="rss" xmlUrl="http://cn.nytimes.com/rss/news.xml"  />
+  <outline text="中新网国际新闻" title="中新网国际新闻" type="rss" xmlUrl="http://www.chinanews.com.cn/rss/world.xml"  />
+  <outline text="BBC中文网" title="BBC中文网" type="rss" xmlUrl="http://www.bbc.co.uk/zhongwen/simp/index.xml"  />
+  <outline text="Lloyd's List" title="Lloyd's List" type="rss" xmlUrl="https://feeds.feedblitz.com/lloyds-list"  />
+  <outline text="War on the Rocks" title="War on the Rocks" type="rss" xmlUrl="http://warontherocks.com/feed/"  />
+  <outline text="24小时全球新闻滚动 – 大纪元" title="大纪元" type="rss" xmlUrl="http://www.epochtimes.com/gb/xml/n24hr.rss"  />
+  <outline text="阿波罗新闻网" title="阿波罗新闻网" type="rss" xmlUrl="http://feeds.feedburner.com/ablw/news"  />
+  <outline text="百度国际焦点新闻" title="百度国际焦点新闻" type="rss" xmlUrl="http://news.baidu.com/n?cmd=1&class=internews&tn=rss"  />
+  <outline text="大陆新闻 – 大纪元" title="大纪元" type="rss" xmlUrl="http://www.epochtimes.com/gb/xml/nsc413.rss"  />
+  <outline text="俄罗斯卫星通讯社" title="俄罗斯卫星通讯社" type="rss" xmlUrl="http://rusnews.cn/export/rss2/index.xml"  />
+  <outline text="法国国际广播电台" title="法广" type="rss" xmlUrl="http://www.chinese.rfi.fr/last_24h/rss"  />
+  <outline text="联合国新闻" title="联合国新闻" type="rss" xmlUrl="http://www.un.org/zh/news/rss/rss_chinese.asp"  />
+  <outline text="南方周末" title="南方周末" type="rss" xmlUrl="http://feeds.feedburner.com/nfzm/hotnews"  />
+  <outline text="纽约时报中文网" title="纽约时报中文网" type="rss" xmlUrl="http://cn.nytimes.com/rss/news.xml"  />
+  <outline text="泰国头条新闻" title="泰国头条新闻" type="rss" xmlUrl="https://www.thaiheadlines.com/feed/"  />
+  <outline text="Al Jazeera – Breaking News" title="Al Jazeera" type="rss" xmlUrl="http://english.aljazeera.net/Services/Rss/?PostingId=2007731105943979989"  />
+  <outline text="Axios" title="Axios" type="rss" xmlUrl="
+    https://www.axios.com/feeds/feed.rss"  />
+  <outline text="FOX news" title="FOX news" type="rss" xmlUrl="
+    http://www.foxnews.com/xmlfeed/rss/0,4313,0,00.rss"  />
+  <outline text="NYT - Politics" title="NYT" type="rss" xmlUrl="
+    http://www.nytimes.com/services/xml/rss/nyt/Politics.xml"  />
+  <outline text="Politico" title="Politico" type="rss" xmlUrl="
+    http://feeds.politico.com/politico/rss/politicopicks"  />
+  <outline text="Slate - Culture" title="Slate" type="rss" xmlUrl="
+    http://www.slate.com/rss"  />
+  <outline text="The Atlantic - Politics" title="The Atlantic" type="rss" xmlUrl="
+    http://feeds.feedburner.com/AtlanticPoliticsChannel"  />
+  <outline text="The Intercept" title="The Intercept" type="rss" xmlUrl="
+    https://firstlook.org/theintercept/feed/"  />
+  <outline text="TNL The News Lens" title="TNL" type="rss" xmlUrl="
+    http://feeds.feedburner.com/TheNewsLens"  />
+  <outline text="US news" title="US news" type="rss" xmlUrl="
+    http://www.guardian.co.uk/world/usa/rss"  />
+  <outline text="Vox" title="Vox" type="rss" xmlUrl="
+    http://www.vox.com/rss/index.xml"  />
+  <outline text="Washington Post - Politics " title="Washington Post" type="rss" xmlUrl="http://www.washingtonpost.com/wp-dyn/rss/politics/index.xml"  />
+
 </outline>
 
 <outline text="科技" title="科技">
@@ -40,12 +55,16 @@
 <outline text="36氪" title="36氪" type="rss" xmlUrl="https://plink.anyfeeder.com/36kr"  />
 <outline text="cnBeta" title="cnBeta" type="rss" xmlUrl="https://plink.anyfeeder.com/cnbeta"  />
 <outline text="IT 之家" title="IT 之家" type="rss" xmlUrl="https://plink.anyfeeder.com/ithome/it"  />
-<outline text="MIT 科技评论 / 本周热榜" title="MIT 科技评论 / 本周热榜" type="rss" xmlUrl="https://plink.anyfeeder.com/mittrchina/hot"  />
-<outline text="Readhub / 热门话题" title="Readhub / 热门话题" type="rss" xmlUrl="https://plink.anyfeeder.com/readhub/topic"  />
-<outline text="Readhub / 每日早报" title="Readhub / 每日早报" type="rss" xmlUrl="https://plink.anyfeeder.com/readhub/daily"  />
-<outline text="Readhub / 区块链快讯" title="Readhub / 区块链快讯" type="rss" xmlUrl="https://plink.anyfeeder.com/readhub/blockchain"  />
-<outline text="新浪专栏 / 创事记" title="新浪专栏 / 创事记" type="rss" xmlUrl="https://plink.anyfeeder.com/sina/csj"  />
+<outline text="MIT 科技评论 – 本周热榜" title="MIT 科技评论 – 本周热榜" type="rss" xmlUrl="https://plink.anyfeeder.com/mittrchina/hot"  />
+<outline text="Readhub – 热门话题" title="Readhub – 热门话题" type="rss" xmlUrl="https://plink.anyfeeder.com/readhub/topic"  />
+<outline text="Readhub – 每日早报" title="Readhub – 每日早报" type="rss" xmlUrl="https://plink.anyfeeder.com/readhub/daily"  />
+<outline text="Readhub – 区块链快讯" title="Readhub – 区块链快讯" type="rss" xmlUrl="https://plink.anyfeeder.com/readhub/blockchain"  />
+<outline text="新浪专栏 – 创事记" title="新浪专栏 – 创事记" type="rss" xmlUrl="https://plink.anyfeeder.com/sina/csj"  />
 <outline text="阮一峰的网络日志" title="阮一峰的网络日志" type="rss" xmlUrl="https://www.ruanyifeng.com/blog/atom.xml"  />
+<outline text="百度互联网焦点新闻" title="百度互联网焦点新闻" type="rss" xmlUrl="http://news.baidu.com/n?cmd=1&class=internet&tn=rss"  />
+<outline text="博客园" title="博客园" type="rss" xmlUrl="http://news.cnblogs.com/rss"  />
+<outline text="机器之心" title="机器之心" type="rss" xmlUrl="http://www.jiqizhixin.com/rss"  />
+<outline text="OSCHINA" title="OSCHINA" type="rss" xmlUrl="http://www.oschina.net/news/rss"  />
 </outline>
 
 <outline text="知识" title="知识">
@@ -54,17 +73,18 @@
 </outline>
 
 <outline text="财经" title="财经">
-<outline text="雪球 / 今日话题" title="雪球 / 今日话题" type="rss" xmlUrl="https://plink.anyfeeder.com/xueqiu/today"  />
-<outline text="雪球 / 热帖" title="雪球 / 热帖" type="rss" xmlUrl="https://plink.anyfeeder.com/xueqiu/hot"  />
+<outline text="雪球 – 今日话题" title="雪球 – 今日话题" type="rss" xmlUrl="https://plink.anyfeeder.com/xueqiu/today"  />
+<outline text="雪球 – 热帖" title="雪球 – 热帖" type="rss" xmlUrl="https://plink.anyfeeder.com/xueqiu/hot"  />
 <outline text="财富中文网" title="财富中文网" type="rss" xmlUrl="https://plink.anyfeeder.com/fortunechina"  />
-<outline text="财富中文网 / 商业" title="财富中文网 / 商业" type="rss" xmlUrl="https://plink.anyfeeder.com/fortunechina/shangye"  />
-<outline text="财富中文网 / 领导力" title="财富中文网 / 领导力" type="rss" xmlUrl="https://plink.anyfeeder.com/fortunechina/lindgaoli"  />
-<outline text="财富中文网 / 科技" title="财富中文网 / 科技" type="rss" xmlUrl="https://plink.anyfeeder.com/fortunechina/keji"  />
-<outline text="财富中文网 / 研究" title="财富中文网 / 研究" type="rss" xmlUrl="https://plink.anyfeeder.com/fortunechina/report"  />
+<outline text="财富中文网 – 商业" title="财富中文网 – 商业" type="rss" xmlUrl="https://plink.anyfeeder.com/fortunechina/shangye"  />
+<outline text="财富中文网 – 领导力" title="财富中文网 – 领导力" type="rss" xmlUrl="https://plink.anyfeeder.com/fortunechina/lindgaoli"  />
+<outline text="财富中文网 – 科技" title="财富中文网 – 科技" type="rss" xmlUrl="https://plink.anyfeeder.com/fortunechina/keji"  />
+<outline text="财富中文网 – 研究" title="财富中文网 – 研究" type="rss" xmlUrl="https://plink.anyfeeder.com/fortunechina/report"  />
 <outline text="经济日报" title="经济日报" type="rss" xmlUrl="https://plink.anyfeeder.com/jingjiribao"  />
 <outline text="经济观察网" title="经济观察网" type="rss" xmlUrl="https://plink.anyfeeder.com/eeo"  />
-<outline text="界面新闻: 商业" title="界面新闻: 商业" type="rss" xmlUrl="https://plink.anyfeeder.com/jiemian/business"  />
+<outline text="界面新闻 – 商业" title="界面新闻 – 商业" type="rss" xmlUrl="https://plink.anyfeeder.com/jiemian/business"  />
 <outline text="界面新闻: 财经" title="界面新闻: 财经" type="rss" xmlUrl="https://plink.anyfeeder.com/jiemian/finance"  />
+<outline text="百度财经焦点新闻" title="百度财经焦点新闻" type="rss" xmlUrl="http://news.baidu.com/n?cmd=1&class=finannews&tn=rss"  />
 </outline>
 
 <outline text="生活" title="生活">

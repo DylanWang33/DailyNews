@@ -24,3 +24,15 @@ openclaw_timeout: 60
 
 # 开启 AI 批量翻译英文标题（LLM 翻译质量优于 argostranslate）
 openclaw_translate: true
+
+# ── 今日头条用户配置 ────────────────────────────────────────────────────────────
+toutiao_users:
+  - url: "https://www.toutiao.com/c/user/token/MS4wLjABAAAAxoIBc4gqGt5WrRVhokURiNA4ItvtNHypmPx3jgWeV5J9CM5gePNWjF4PaXc-Bh-9/?source=profile&tab=article"
+    name: "匡汉"
+    headless: true
+  - url: "https://www.toutiao.com/c/user/token/MS4wLjABAAAA_C38-woHQPYWpvFjx34ehDbacKUM7ArJemv9VF9bhpM/?source=profile&tab=article"
+    name: "杜文龙"
+    headless: true
+  - url: "https://www.toutiao.com/c/user/token/MS4wLjABAAAAGsSwZ77cwtgpMfwn5loBIkCH0dyPkJX3CuUTiDh9Mns/?source=profile&tab=video"
+    name: "下庄"
+    headless: true

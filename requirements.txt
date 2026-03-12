@@ -9,3 +9,5 @@ lxml
 requests
 beautifulsoup4
 argostranslate
+selenium
+webdriver-manager

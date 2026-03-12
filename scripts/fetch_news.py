@@ -31,6 +31,49 @@ def _has_cjk(s):
     return bool(s and re.search(r"[\u4e00-\u9fff]", str(s)))
 
 
+def _read_existing_links_by_source():
+    """
+    读取本地已存在的链接，按分类/源组织
+    返回 { "分类名": { "源名": set(links) } }
+    """
+    BASE = get_obsidian_base()
+    today = str(date.today())
+    daily_news_dir = os.path.join(BASE, "每日新闻", today)
+
+    result = {}
+
+    if not os.path.isdir(daily_news_dir):
+        return result
+
+    # 遍历所有分类目录
+    for cat_dir_name in os.listdir(daily_news_dir):
+        cat_path = os.path.join(daily_news_dir, cat_dir_name)
+        if not os.path.isdir(cat_path):
+            continue
+
+        result[cat_dir_name] = {}
+
+        # 遍历分类下的所有源文件
+        for source_file in os.listdir(cat_path):
+            if not source_file.endswith(".md"):
+                continue
+
+            source_name = source_file[:-3]  # 去掉 .md
+            filepath = os.path.join(cat_path, source_file)
+
+            try:
+                with open(filepath, "r", encoding="utf-8") as f:
+                    content = f.read()
+                # 提取所有 markdown 链接
+                links = set(re.findall(r'\]\(([^)\s]+)\)', content))
+                if links:
+                    result[cat_dir_name][source_name] = links
+            except Exception:
+                pass
+
+    return result
+
+
 def _parse_keyword_groups(keywords):
     """
     解析 config 的 keywords。每项可为 "美国;伊朗"（分号分隔多个标签），表示 AND：必须全部命中才归入该组。
@@ -53,12 +96,16 @@ def _parse_keyword_groups(keywords):
 def _fetch_all_daily_news(health_tracker=None):
     """
     从 OPML 拉取所有源、所有条目，返回 { 分类: { 源名: [items] } }。
+    - 智能增量抓取：如果本地已存在该源，检测到已知链接时停止该源的抓取
     - 传入 health_tracker 记录各 URL 的超时/成功状态
     - 英文标题优先 LLM 批量翻译，回退 argostranslate
     """
     categories = load_categories_from_opml()
     if not categories:
         return {}
+
+    # 读取本地已存在的链接（增量模式）
+    existing_links = _read_existing_links_by_source()
 
     all_items_needing_translation = []
 
@@ -74,11 +121,24 @@ def _fetch_all_daily_news(health_tracker=None):
                 continue
             items = []
             seen_links = set()
+
+            # 获取该源的已知链接集合
+            known_links = existing_links.get(category_name, {}).get(name, set())
+            if known_links:
+                print(f"[增量] {category_name}/{name}: 本地已有 {len(known_links)} 条记录")
+
             for raw in fetch_rss(url, health_tracker=health_tracker):
                 link = (raw.get("link") or "").strip()
                 title = (raw.get("title") or "").strip()
                 if not link or not title or link in seen_links:
                     continue
+
+                # 检测增量边界：如果遇到已知链接，停止该源的抓取
+                if link in known_links:
+                    if items:
+                        print(f"[增量] {category_name}/{name}: ✓ 已到达已存在内容，停止抓取（新增 {len(items)} 条）")
+                    break
+
                 seen_links.add(link)
                 item = {
                     "title": title,
@@ -92,6 +152,7 @@ def _fetch_all_daily_news(health_tracker=None):
                 items.append(item)
                 if item["_needs_translation"]:
                     all_items_needing_translation.append(item)
+
             if items:
                 by_source[name] = items
         if by_source:
