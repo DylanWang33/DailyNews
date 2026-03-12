@@ -282,23 +282,3 @@ def load_categories_from_opml():
             if feeds and cat_name:
                 result[cat_name] = feeds
     return result
-
-
-def load_sources():
-    """从 sources/rss.yaml 加载，返回 [{"name","url"}, ...]。"""
-    yaml_path = os.path.join(_ROOT, "sources", "rss.yaml")
-    if not os.path.isfile(yaml_path):
-        return []
-    with open(yaml_path, "r", encoding="utf-8") as f:
-        data = yaml.safe_load(f)
-    if not isinstance(data, list):
-        return []
-    out = []
-    for x in data:
-        url = (x.get("url") or "").strip()
-        if not url:
-            continue
-        out.append({"name": (x.get("name") or url[:50]), "url": url,
-                    "lang": (x.get("lang") or "").strip().lower()})
-    out.sort(key=lambda s: (0 if s.get("lang") == "zh" else 1))
-    return out
