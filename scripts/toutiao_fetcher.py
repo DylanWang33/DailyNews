@@ -12,6 +12,7 @@ import yaml
 import datetime
 import time
 from pathlib import Path
+from datetime import timezone, timedelta
 
 # 导入 selenium
 from selenium import webdriver
@@ -34,40 +35,85 @@ def load_config():
         return yaml.safe_load(f)
 
 
+def get_shanghai_now():
+    """获取当前上海时区时间"""
+    # 获取 UTC 时间
+    now_utc = datetime.datetime.now(timezone.utc)
+    # 转换为上海时区（UTC+8）
+    shanghai_tz = timezone(timedelta(hours=8))
+    return now_utc.astimezone(shanghai_tz).replace(tzinfo=None)
+
+
 def parse_relative_time(time_str):
     """
-    解析相对时间字符串（如"5分钟前"、"2小时前"、"3天前"）为 datetime 对象
+    解析相对时间字符串为 datetime 对象（上海时区）
+    支持格式：
+    - "39分钟前"、"2小时前"、"3天前"
+    - "昨天18:47"、"前天15:37"
+    - "刚刚"
     返回发布的绝对时间，若无法解析则返回 None
     """
     if not time_str:
         return None
 
     time_str = time_str.strip()
-    now = datetime.datetime.now()
+    now = get_shanghai_now()
 
     # 匹配 "N分钟前"
     m = re.search(r'(\d+)\s*分钟前', time_str)
     if m:
         minutes = int(m.group(1))
-        return now - datetime.timedelta(minutes=minutes)
+        return now - timedelta(minutes=minutes)
 
     # 匹配 "N小时前"
     m = re.search(r'(\d+)\s*小时前', time_str)
     if m:
         hours = int(m.group(1))
-        return now - datetime.timedelta(hours=hours)
+        return now - timedelta(hours=hours)
 
     # 匹配 "N天前"
     m = re.search(r'(\d+)\s*天前', time_str)
     if m:
         days = int(m.group(1))
-        return now - datetime.timedelta(days=days)
+        return now - timedelta(days=days)
+
+    # 匹配 "昨天HH:MM"
+    m = re.search(r'昨天(\d{1,2}):(\d{2})', time_str)
+    if m:
+        hour, minute = int(m.group(1)), int(m.group(2))
+        yesterday = now - timedelta(days=1)
+        return yesterday.replace(hour=hour, minute=minute, second=0, microsecond=0)
+
+    # 匹配 "前天HH:MM"
+    m = re.search(r'前天(\d{1,2}):(\d{2})', time_str)
+    if m:
+        hour, minute = int(m.group(1)), int(m.group(2))
+        day_before_yesterday = now - timedelta(days=2)
+        return day_before_yesterday.replace(hour=hour, minute=minute, second=0, microsecond=0)
 
     # 匹配 "刚刚"
     if "刚刚" in time_str:
         return now
 
     return None
+
+
+def is_within_24h(time_str):
+    """
+    检查时间是否在 24 小时内（上海时区）
+    返回 (在24h内, 是否可解析)
+    """
+    pub_time = parse_relative_time(time_str)
+    if pub_time is None:
+        # 无法解析时间，保守起见认为在 24h 内
+        return True, False
+
+    # 使用上海时区当前时间计算 24 小时边界
+    now = get_shanghai_now()
+    cutoff = now - timedelta(hours=24)
+    within_24h = pub_time >= cutoff
+
+    return within_24h, True
 
 
 def read_existing_links(filepath):
@@ -165,6 +211,15 @@ def fetch_toutiao_articles(user_url, author_name, existing_links, headless=False
                         pass
 
                     if title and link:
+                        # 检查是否在 24 小时内（关键优化：提前停止）
+                        within_24h, parseable = is_within_24h(pub_date_str)
+
+                        if not within_24h and parseable:
+                            # 超过 24 小时，停止抓取
+                            print(f"[{author_name}] ⏹ 已超过 24 小时，停止抓取（共新增 {len(articles)} 条）")
+                            should_stop = True
+                            break
+
                         articles.append({
                             "title": title,
                             "link": link,
@@ -245,25 +300,18 @@ def main():
         else:
             print(f"[{author_name}] 本地无记录，全量抓取")
 
-        # 智能增量抓取
+        # 智能增量抓取（已在抓取时进行 24 小时过滤）
         articles = fetch_toutiao_articles(user_url, author_name, existing_links, headless=headless)
 
         if not articles:
             print(f"[{author_name}] 未找到新内容")
             continue
 
-        # 过滤 24 小时内的文章
-        filtered_articles = filter_24h_articles(articles)
-
-        if not filtered_articles:
-            print(f"[{author_name}] 未找到 24 小时内的新文章")
-            continue
-
-        print(f"[{author_name}] ✓ 新增 {len(filtered_articles)} 篇 24 小时内的内容")
+        print(f"[{author_name}] ✓ 新增 {len(articles)} 篇内容")
 
         # 写入 Obsidian
         items = []
-        for article in filtered_articles:
+        for article in articles:
             items.append({
                 "title": article["title"],
                 "link": article["link"],

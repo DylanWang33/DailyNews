@@ -17,11 +17,13 @@ def clean_filename(name):
 
 def _format_item(number: int, item: dict, include_summary: bool) -> str:
     """
-    格式化单条新闻为卡片式 markdown：
-      **N. [标题](url)**
-      > 摘要...
-      <small>📰 来源 · 🕐 发布时间</small>
-      ---
+    格式化单条新闻为优化的卡片式 markdown（HTML + CSS）
+    视觉层级：
+      标题（最大 + 最深色）
+      ↓
+      摘要（中等大小）
+      ↓
+      来源信息（最小 + 最浅色）
     """
     title = (item.get("title") or "").strip()
     link = (item.get("link") or "").strip()
@@ -34,34 +36,34 @@ def _format_item(number: int, item: dict, include_summary: bool) -> str:
         return ""
 
     lines = []
+    lines.append("<div class=\"dailynews-card\">")
 
-    # 标题行：粗体链接（视觉突出，可点击）
+    # 标题行：最大 + 最深色
     if link:
-        lines.append(f"**{number}. [{title}]({link})**")
+        lines.append(f"<span class=\"card-title\">{number}. <a href=\"{link}\">{title}</a></span>")
     else:
-        lines.append(f"**{number}. {title}**")
+        lines.append(f"<span class=\"card-title\">{number}. {title}</span>")
 
     # 原标题（英文源翻译为中文后保留原文）
     if title_original and title_original != title:
-        lines.append(f"*{title_original}*")
+        lines.append(f"<span class=\"card-original-title\">{title_original}</span>")
 
-    # 摘要（blockquote 样式，有左侧彩色边框）
+    # 摘要：中等大小
     if include_summary and summary:
         # 限制长度，超长摘要截断
         summary_text = summary[:300].replace("\n", " ")
-        lines.append(f"> {summary_text}")
+        lines.append(f"<span class=\"card-summary\">{summary_text}</span>")
 
-    # 元信息行
+    # 元信息行：最小 + 最浅色
     meta = []
     if source:
-        meta.append(f"📰 {source}")
+        meta.append(f"<span class=\"card-meta-item\">📰 {source}</span>")
     if pub_date:
-        meta.append(f"🕐 {pub_date}")
+        meta.append(f"<span class=\"card-meta-item\">🕐 {pub_date}</span>")
     if meta:
-        lines.append(f"<small>{' · '.join(meta)}</small>")
+        lines.append(f"<span class=\"card-meta\">{' '.join(meta)}</span>")
 
-    lines.append("")
-    lines.append("---")
+    lines.append("</div>")
     lines.append("")
 
     return "\n".join(lines)

@@ -254,6 +254,47 @@ def summarize_with_llm(article_text, topic_hint="", max_sentences=3):
     return _call_llm(cfg, prompt, max_tokens=500, temperature=0.3)
 
 
+def summarize_professional(article_text, article_title="", keywords=""):
+    """
+    为「我的关注」生成专业学术化总结。
+
+    要求：
+    1. 客观、中性、学术化表达
+    2. 保留核心论点、关键事实与逻辑结构
+    3. 避免个人评价或推测
+    4. 200-300 字
+    5. 完整段落，逻辑清晰、语言简洁
+    6. 准确概括背景与意义
+
+    返回总结字符串，或 None（LLM 不可用/失败时）
+    """
+    if not article_text or not isinstance(article_text, str):
+        return None
+    cfg = _get_config()
+    if not _llm_available(cfg):
+        return None
+
+    text = article_text[:_MAX_TEXT]
+
+    prompt = """请对以下文章进行专业化摘要，总结其核心观点与主要信息。要求：
+
+1. 使用客观、中性、学术化表达
+2. 保留文章的核心论点、关键事实与逻辑结构
+3. 避免加入个人评价或推测
+4. 内容控制在200-300字之间
+5. 用完整段落表达，逻辑清晰、语言简洁
+6. 如文章涉及政策、人物或事件，应准确概括其背景与意义"""
+
+    if article_title:
+        prompt += f"\n\n文章标题：{article_title}"
+    if keywords:
+        prompt += f"\n关键词：{keywords}"
+
+    prompt += f"\n\n文章内容：\n{text}"
+
+    return _call_llm(cfg, prompt, max_tokens=800, temperature=0.2)
+
+
 # ─── 可选功能 4：AI 批量翻译标题（替代 argostranslate） ─────────────────────
 
 def translate_titles_with_llm(titles):

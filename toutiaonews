@@ -1,0 +1,14 @@
+#!/bin/bash
+# 快捷命令：toutiaonews - 今日头条文章抓取
+
+REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# 检查 venv
+if [[ ! -x "${REPO}/venv/bin/python" ]]; then
+    echo "错误：未找到 venv"
+    echo "请先执行：cd $REPO && python3 -m venv venv && ./venv/bin/pip install -r requirements.txt"
+    exit 1
+fi
+
+# 执行抓取
+"${REPO}/venv/bin/python" "${REPO}/scripts/toutiao_fetcher.py" "$@"

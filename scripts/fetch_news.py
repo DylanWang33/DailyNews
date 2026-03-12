@@ -241,6 +241,43 @@ def _relevance_to_keyword(keyword, title, summary, translate_zh_to_en_fn):
     return min(1.0, score)
 
 
+def _generate_professional_summaries(items, keywords):
+    """
+    为「我的关注」文章批量生成专业学术化总结。
+
+    流程：
+    1. 尝试用 LLM 生成 200-300 字的学术化总结（summarize_professional）
+    2. 若 LLM 失败，保留原摘要
+    """
+    try:
+        from llm_summary import summarize_professional
+    except Exception:
+        return
+
+    for item in items:
+        title = item.get("title") or ""
+        summary = item.get("summary") or ""
+        link = item.get("link") or ""
+
+        # 有摘要才尝试生成专业总结
+        if not summary:
+            continue
+
+        try:
+            # 调用 AI 生成专业总结
+            professional_summary = summarize_professional(
+                article_text=summary,
+                article_title=title,
+                keywords=keywords
+            )
+            if professional_summary:
+                item["summary"] = professional_summary
+                print(f"    [专业总结] {title[:30]}...")
+        except Exception:
+            # LLM 失败，保留原摘要
+            pass
+
+
 def _tag_in_text(tag, text):
     """标签是否出现在文本中（含空白标准化）。"""
     if not tag or not text:
@@ -266,17 +303,23 @@ def _build_my_following_single_tag(daily_news_flat, group_name, tags, relevance_
     单标签组：
     - 若 OpenClaw 已配置，用 batch_is_relevant_llm() 进行 AI 语义相关性判断（更准确，识别同义表达）
     - 否则回退：标题+摘要字符串契合度评分 ≥ relevance_threshold
+    - 为匹配的文章生成专业学术化总结
     """
     assert len(tags) == 1
     kw = tags[0]
 
     # AI 路径：批量相关性判断
+    matched_items = []
     try:
         from llm_summary import batch_is_relevant_llm
         flags = batch_is_relevant_llm(daily_news_flat, kw)
         if flags is not None:
             print(f"  [AI筛选] 关键词「{kw}」：共 {len(daily_news_flat)} 篇 → AI 判定相关 {sum(flags)} 篇")
-            return [dict(item) for item, flag in zip(daily_news_flat, flags) if flag]
+            matched_items = [dict(item) for item, flag in zip(daily_news_flat, flags) if flag]
+            if matched_items:
+                # 为匹配的文章生成专业总结
+                _generate_professional_summaries(matched_items, group_name)
+            return matched_items
     except Exception:
         pass
 
@@ -287,6 +330,11 @@ def _build_my_following_single_tag(daily_news_flat, group_name, tags, relevance_
         summary = item.get("summary") or ""
         if _relevance_to_keyword(kw, title, summary, translate_zh_to_en_fn) >= relevance_threshold:
             out.append(dict(item))
+
+    if out:
+        # 为匹配的文章生成专业总结
+        _generate_professional_summaries(out, group_name)
+
     return out
 
 
@@ -338,7 +386,7 @@ def _build_my_following_multi_tag(BASE, daily_news_flat, group_name, tags, date_
             if match is False:
                 continue  # LLM 确认不相关，跳过
             elif match is True:
-                # LLM 确认相关，抓正文生成高质量 AI 摘要
+                # LLM 确认相关，生成专业学术化总结（200-300字）
                 article_text = ""
                 if link:
                     try:
@@ -348,15 +396,26 @@ def _build_my_following_multi_tag(BASE, daily_news_flat, group_name, tags, date_
                     except Exception:
                         pass
                 try:
-                    llm_sum = summarize_with_llm(
-                        article_text or summary_rss,
-                        topic_hint=group_name,
-                        max_sentences=3
+                    from llm_summary import summarize_professional
+                    # 优先使用专业总结（学术化 200-300字）
+                    professional_sum = summarize_professional(
+                        article_text=article_text or summary_rss,
+                        article_title=title,
+                        keywords=group_name
                     )
-                    item["summary"] = llm_sum or (summarize(article_text, sentences=3) if article_text else summary_rss) or summary_rss
+                    if professional_sum:
+                        item["summary"] = professional_sum
+                    else:
+                        # 降级：简短总结
+                        item["summary"] = summarize_with_llm(
+                            article_text or summary_rss,
+                            topic_hint=group_name,
+                            max_sentences=3
+                        ) or (summarize(article_text, sentences=3) if article_text else summary_rss) or summary_rss
                 except Exception:
                     item["summary"] = summarize(article_text, sentences=3) if article_text else summary_rss
                 result.append(item)
+                print(f"    [多标签「{group_name}」专业总结] {title[:30]}...")
                 continue
             # match is None：LLM 调用失败，降级到传统方法
 
